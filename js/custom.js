@@ -129,6 +129,30 @@
 						}		  		  
 		});
 
+		$('.popup-intro').magnificPopup({
+		    type: 'iframe',		  	  
+				iframe: {
+					patterns: {
+						youtube: {			   
+							index: 'youtube.com',
+							src: 'https://www.youtube.com/embed/VqoNXslPZ0Q'				
+								}
+							}
+						}		  		  
+		});
+
+		$('.popup-floorpan').magnificPopup({
+		    type: 'iframe',		  	  
+				iframe: {
+					patterns: {
+						youtube: {			   
+							index: 'youtube.com',
+							src: 'https://www.youtube.com/embed/geXBYnTDrrs?vq=hd1080&rel=0&modestbranding=1&autoplay=0&mute=0&controls=1'				
+								}
+							}
+						}		  		  
+		});
+
 
 		/*----------------------------------------------------*/
 		/*	Video Link #2 Lightbox
