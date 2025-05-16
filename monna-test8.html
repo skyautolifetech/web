@@ -106,25 +106,27 @@
 					</div>
 				</div>
 				<!-- IMAGE BLOCK -->
-				<div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
-					<div class="col flex-[1_0_0%] w-full max-w-full px-[calc(0.5*_1.5rem)]">
-						<div
-							class="img-block !text-center video-preview wow fadeInUp mb-[-100px] lg:max-xl:-mb-[80px] md:max-lg:-mb-[80px] sm:max-md:!mb-[-50px] xsm:max-sm:-mb-[40px] relative">
-							<!-- Play Icon -->
-							<a class="video-popup2" href="https://www.youtube.com/watch?v=VqoNXslPZ0Q">
-								<div
-									class="video-btn video-btn-xl bg--theme w-[6.25rem] h-[6.25rem] mt-[-3.125rem] ml-[-3.125rem] hover:before:opacity-75 md:max-lg:w-28 md:max-lg:!h-28 md:max-lg:!mt-[-3.5rem] md:max-lg:ml-[-3.5rem] !absolute inline-block !text-center !text-white rounded-[100%] left-2/4 top-2/4 before:content-[''] before:absolute before:left-[-5px] before:right-[-5px] before:top-[-5px] before:bottom-[-5px] before:opacity-0 before:transition-all before:duration-[400ms] before:ease-[ease-in-out] before:rounded-[50%] before:bg-[rgba(255,255,255,0.2)] group">
-									<div
-										class="video-block-wrapper transition-all duration-[400ms] ease-[ease-in-out] group-hover:scale-95">
-										<span class="flaticon-play-button"></span>
-									</div>
-								</div>
-							</a>
-							<!-- Preview Image -->
-							<img class="img-fluid" src="img/gcb.jpg" alt="video-preview">
-						</div>
+				<div
+					style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+					
+					<div style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+						<button onclick="toggleImage(3)"
+							style="padding: 0.5rem 1rem; background-color: #ef4444; color: white; border-radius: 0.375rem;">Morning
+							</button>
+						<button onclick="toggleImage(1)"
+							style="padding: 0.5rem 1rem; background-color: #3b82f6; color: white; border-radius: 0.375rem;">Afternoon</button>
+						<button onclick="toggleImage(2)"
+							style="padding: 0.5rem 1rem; background-color: #10b981; color: white; border-radius: 0.375rem;">Evening</button>
+						
+						<button onclick="toggleImage(4)"
+							style="padding: 0.5rem 1rem; background-color: #f59e0b; color: white; border-radius: 0.375rem;">Night</button>
 					</div>
+
+					<img id="toggleImage" src="./images1/mode/night.jpg" alt="Toggle Image"
+						style="border-radius: 0.5rem; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);">
+
 				</div>
+
 			</div>
 			<!-- End container -->
 		</div>
@@ -686,7 +688,7 @@
 					class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
 					<div
 						class="img-block !text-center left-column wow fadeInRight mr-[30px] lg:max-xl:mr-[5px] md:max-lg:mr-0 sm:max-md:mx-[3%] xsm:max-sm:m-[0_2%_35px]">
-						
+
 						<div style="display: flex; align-items: center; justify-content: center;">
 							<div
 								style="position: relative; overflow: hidden; width: 375px; height: 620px; border-radius: 40px; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); border: 1px solid rgba(147, 197, 253, 0.5); bbackdrop-filter: blur(10px);">
@@ -867,7 +869,7 @@
 					<div
 						class="img-block !text-center wow fadeInLeft ml-[30px] lg:max-xl:ml-[15px] md:max-lg:ml-[15px]">
 						<img class="img-fluid max-w-none inline-block lg:max-xl:!max-w-[175%] md:max-lg:!max-w-[220%]"
-								src="images/tablet-01.png" alt="content-image">
+							src="images/tablet-01.png" alt="content-image">
 					</div>
 				</div>
 			</div>
@@ -1347,7 +1349,7 @@
 	<!-- END FAQs-3 -->
 	<!-- BANNER-13
                      ============================================= -->
-	
+
 	<!-- END BANNER-13 -->
 
 
@@ -1600,7 +1602,7 @@
 								class="s-26 w--700 xl:!text-[1.625rem] lg:max-xl:!text-[1.5rem] md:max-lg:!text-[1.470588rem] sm:max-md:!text-[1.625rem] xsm:max-sm:!text-[1.4375rem] !font-bold leading-[1.4] xl:!mb-[20px] md:max-lg:!mb-[15px] lg:max-xl:!mb-[15px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] font-Jakarta">
 								Contact Us on WhatsApp</h4>
 							<!-- Text -->
-							
+
 							<!-- Form -->
 							<div name="requestForm"
 								class="flex flex-wrap items-center justify-center mx-[calc(-0.5*_1.5rem)]  request-form">
@@ -1714,15 +1716,17 @@
 		</div>
 		<!-- END BRANDS-1 -->
 
-<!-- SECTION CONTENT (ROW) start-->	
-		<section id="lnk-3" class=" pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px]  ct-02 content-section division">
+		<!-- SECTION CONTENT (ROW) start-->
+		<section id="lnk-3"
+			class=" pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px]  ct-02 content-section division">
 			<div class="container">
-			   <!-- SECTION CONTENT (ROW) -->	
-			   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
-				  <!-- IMAGE BLOCK -->
-				
-				  <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
-					 <div style="display: flex; align-items: center; justify-content: center;">
+				<!-- SECTION CONTENT (ROW) -->
+				<div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
+					<!-- IMAGE BLOCK -->
+
+					<div
+						class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+						<div style="display: flex; align-items: center; justify-content: center;">
 
 							<div
 								style="position: relative; overflow: hidden; width: 375px; height: 620px; border-radius: 40px; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); border: 1px solid rgba(147, 197, 253, 0.5); bbackdrop-filter: blur(10px);">
@@ -1732,37 +1736,43 @@
 								</iframe>
 							</div>
 						</div>
-				  </div>
-				  
-				  <!-- TEXT BLOCK -->	
-				  <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
-				   <div class="txt-block left-column wow fadeInRight">
-					  <!-- Section ID -->	
-					  <span class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">Easy Integration</span>
-					  <!-- Title -->	
-					  <h2 class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">Plug your essential tools in few clicks</h2>
-					  <!-- List -->	
-					  <ul class="simple-list">
-						 <li class="list-item">
-							<p>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis 
-							   sodales magna undo aoreet primis
-							</p>
-						 </li>
-						 <li class="list-item">
-							<p class="!mb-0">Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an 
-							   ultrice ipsum aliquam undo congue dolor cursus purus congue and ipsum purus sapien 
-							   a blandit
-							</p>
-						 </li>
-					  </ul>
-				   </div>
+					</div>
+
+					<!-- TEXT BLOCK -->
+					<div
+						class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+						<div class="txt-block left-column wow fadeInRight">
+							<!-- Section ID -->
+							<span
+								class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">Easy
+								Integration</span>
+							<!-- Title -->
+							<h2
+								class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+								Plug your essential tools in few clicks</h2>
+							<!-- List -->
+							<ul class="simple-list">
+								<li class="list-item">
+									<p>Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis
+										sodales magna undo aoreet primis
+									</p>
+								</li>
+								<li class="list-item">
+									<p class="!mb-0">Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an
+										ultrice ipsum aliquam undo congue dolor cursus purus congue and ipsum purus
+										sapien
+										a blandit
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- END TEXT BLOCK -->
 				</div>
-				  <!-- END TEXT BLOCK -->	
-			   </div>
-			   <!-- END SECTION CONTENT (ROW) -->	
+				<!-- END SECTION CONTENT (ROW) -->
 			</div>
 			<!-- End container -->
-		 </section>
+		</section>
 
 
 
@@ -2392,7 +2402,7 @@
 					<!-- END FOOTER LINKS -->
 
 
-				
+
 
 					<!-- FOOTER LINKS -->
 					<div
@@ -2599,8 +2609,21 @@
                      })();
                   </script>
                   -->
-	<script src="js/changer.js"></script>
-	<script defer src="js/styleswitch.js"></script>
+
+	<script>
+		function toggleImage(buttonNumber) {
+			const imageElement = document.getElementById('toggleImage');
+			const images = [
+				'./images1/mode/afternoon.jpg',
+				'./images1/mode/evening.jpg',
+				'./images1/mode/morning.jpg',
+				'./images1/mode/night.jpg'
+			];
+			imageElement.src = images[buttonNumber - 1];
+		}
+	</script>
+
+
 </body>
 
 </html>
