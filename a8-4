@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="elite-themes24">
+    <meta name="description" content="AutoLife - Future Technology">
+    <meta name="keywords"
+        content="smart home automation, smart home solutions, home automation systems, smart home devices, intelligent home technology, IoT home automation, AI home systems, smart home integration, custom smart home setups, home automation services, smart home installation, smart lighting systems, smart thermostats, smart security systems, home surveillance automation, remote home monitoring, Apple HomeKit support, smart door locks, smart blinds automation, smart climate control, motion sensor systems, energy-efficient smart home, smart home for seniors, smart home for families, home automation for apartments, smart home control panel, home assistant setup, ESP32 smart home projects, Zigbee automation, home automation experts, local smart home installers, smart home company near me, smart home consultancy, smart home networking, smart home cybersecurity, multi-room smart audio, whole-home automation, DIY smart home setup, professional smart home design, smart home mobile app, smart home dashboard, advanced automation routines, proactive home automation, ambient home intelligence, secure smart home systems, home automation integration services, smart home energy management, eco-friendly smart homes, smart home support and maintenance">
+
+    <!-- SITE TITLE -->
+    <title>AutoLife - Future Technology</title>
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- FONT ICONS -->
+    <link href="css/flaticon.css" rel="stylesheet">
+
+    <!-- PLUGINS STYLESHEET -->
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/dropdown-effects/fade-down.css" id="effect" media="all" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/lunar.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- TEMPLATE CSS -->
+    <link href="./style.css" rel="stylesheet">
+
+    <!-- floorplan CSS -->
+    <script src="./fp1/index.js" defer></script>
+    <link rel="stylesheet" href="./fp1/index.css">
+
+
+
+</head>
+
+
+
+<body class="theme--dark">
+    <!-- WhatsApp button -->
+    <!-- <div class="flex justify-end item-end">
+		<div class="fixed bottom-5 cursor-pointer" style="z-index: 9999;"
+			onclick="window.open('https://wa.me/+6592212224?text=Hi%20Sky, ', '_blank')" aria-label="Chat on WhatsApp">
+			<div class="bg-green-500 rounded-full p-2 shadow-lg">
+				<img src="./images1/whatsAppLogo.png" alt="WhatsApp"
+					style="width: 7em; height: 4em !important; object-fit: contain;" />
+			</div>
+		</div>
+	</div> -->
+
+    <!-- PRELOADER SPINNER
+                  ============================================= -->
+    <div id="loading" class="loading--theme  h-full w-full fixed z-[99999999] mt--0 top-0 bg-[#f5f5f9]">
+        <div id="loading-center"
+            class="absolute !h-[100px] !w-[100px] mt-[-50px] ml-[-50px] animate-[loading-center-absolute_1s_infinite] left-2/4 top-2/4 lg:max-xl:!h-[90px] lg:max-xl:!w-[90px] lg:max-xl:!mt-[-45px] lg:max-xl:ml-[-45px] md:max-lg:!h-[90px] md:max-lg:!w-[90px] md:max-lg:!mt-[-45px] md:max-lg:ml-[-45px]">
+            <span
+                class="loader !w-[100px] !h-[100px] inline-block relative box-border animate-[rotation_1s_linear_infinite] rounded-[50%] border-2 border-solid border-[transparent_#888] after:content-[''] after:box-border after:absolute after:-translate-x-2/4 after:-translate-y-2/4 after:rounded-[50%] after:border-[50px] after:border-solid after:border-[transparent_rgba(30,30,30,0.15)] after:left-2/4 after:!top-2/4 lg:max-xl:!w-[90px] lg:max-xl:!h-[90px] lg:max-xl:after:border-[45px] lg:max-xl:after:border-solid md:max-lg:!w-[90px] md:max-lg:!h-[90px] md:max-lg:after:border-[45px] md:max-lg:after:border-solid sm:max-md:!w-[80px] sm:max-md:!h-[80px] sm:max-md:after:border-[40px] sm:max-md:after:border-solid"></span>
+        </div>
+    </div>
+    <!-- Floorplan
+                     ============================================= -->
+
+    <div class="w-full" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="">
+                <h1>Interactive Floorplan</h1>
+                <div id="svg-container">
+                    <object id="floorplan" data="./fp1/index.svg" type="image/svg+xml" style="max-width: 100vw;">
+                    </object>
+                </div>
+            </div>
+            <div id="overlay1" class="popup-overlay" onclick="hidePopup('img1')"></div>
+            <img id="img1" src="https://i.imgur.com/fned5TC.png" class="popup-image" onclick="hidePopup('img1')">
+            <div id="overlay2" class="popup-overlay" onclick="hidePopup('img2')"></div>
+            <img id="img2" src="https://i.imgur.com/OpgieSl.png" class="popup-image" onclick="hidePopup('img2')">
+            <div id="overlay3" class="popup-overlay" onclick="hidePopup('img3')"></div>
+            <img id="img3" src="https://i.imgur.com/GsvRW1H.jpeg" class="popup-image" onclick="hidePopup('img3')">
+            <div id="overlay4" class="popup-overlay" onclick="hidePopup('img4')"></div>
+            <img id="img4" src="./res/intercom_sampleb3.jpg" class="popup-image" onclick="hidePopup('img4')">
+        </div>
+    </div>
+
+
+    <!-- IMAGE CONTENT
+                     ============================================= -->
+    <section id="lnk-3" class="bg--white-400 ct-10 content-section division">
+        <div
+            class="section-overlay pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] xl:!mb-[100px] lg:max-xl:!mb-[80px] md:max-lg:!mb-[80px] sm:max-md:!mb-[50px] xsm:max-sm:!mb-[40px] w-full h-full">
+            <div class="container">
+                <!-- SECTION TITLE -->
+                <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  justify-center">
+                    <div
+                        class="md:w-10/12 lg:max-xl:w-9/12 xl:w-9/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+                        <div
+                            class="section-title mb--70 xl:!mb-[70px] lg:max-xl:!mb-[60px] md:max-lg:!mb-[50px] !text-center">
+                            <!-- Section ID -->
+                            <!-- <span class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">Engagement Analytics</span> -->
+                            <!-- Title -->
+                            <h2
+                                class="s-50 w--700 xl:!text-[3.125rem] lg:max-xl:!text-[2.875rem] md:max-lg:!text-[2.64705rem] sm:max-md:!text-[2.375rem] xsm:max-sm:!text-[2.0625rem] !font-bold !mb-0 xsm:max-sm:px-[1%] xsm:max-sm:py-0 leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35] !tracking-[-0.5px]">
+                                Bespoke & Private</h2>
+                            <!-- Text -->
+                            <!-- <p
+                                class="s-21 color--grey xl:!text-[1.3125rem] xl:!mt-[18px] !mb-0 lg:max-xl:!mt-[15px] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.32352rem] md:max-lg:!mt-3 sm:max-md:!text-[1.21875rem] sm:max-md:!mt-3 xsm:max-sm:!text-[1.1875rem] xsm:max-sm:!mt-3 xsm:max-sm:px-[3%] xsm:max-sm:py-0">
+                                Singapore Landed Home Edition</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- IMAGE BLOCK -->
+
+                <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
+                    <div class="col flex-[1_0_0%] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+                        <div
+                            class="img-block !text-center video-preview wow fadeInUp mb-[-100px] lg:max-xl:-mb-[80px] md:max-lg:-mb-[80px] sm:max-md:!mb-[-50px] xsm:max-sm:-mb-[40px] relative">
+                            <!-- Play Icon -->
+                            <a class="popup-intro" href="https://www.youtube.com/embed/VqoNXslPZ0Q" target="_blank">
+                                <div class="video-btn video-btn-xl bg--theme w-[6.25rem] h-[6.25rem] mt-[-3.125rem] ml-[-3.125rem] hover:before:opacity-75 md:max-lg:w-28 md:max-lg:!h-28 md:max-lg:!mt-[-3.5rem] md:max-lg:ml-[-3.5rem] !absolute inline-block !text-center !text-white rounded-[100%] left-2/4 top-2/4 before:content-[''] before:absolute before:left-[-5px] before:right-[-5px] before:top-[-5px] before:bottom-[-5px] before:opacity-0 before:transition-all before:duration-[400ms] before:ease-[ease-in-out] before:rounded-[50%] before:bg-[rgba(255,255,255,0.2)] group"
+                                    style="position: absolute; z-index: 10;">
+                                    <div
+                                        class="video-block-wrapper transition-all duration-[400ms] ease-[ease-in-out] group-hover:scale-95">
+                                        <span class="flaticon-play-button"></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class=""
+                                style="display: flex; flex-direction: column; justify-content: center; position: relative;">
+                                <video class="img-fluid" autoplay="autoplay" loop muted playsinline
+                                    style="width: auto; max-height: 33em !important; object-fit: contain; z-index: 1;">
+                                    <source src="./images1/testintro1.mp4" type="video/mp4" alt="intro video">
+                                </video>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End section overlay -->
+    </section>
+    <!-- END IMAGE CONTENT -->
+    <!-- FEATURES-6
+                     ============================================= -->
+    <section id="features-6"
+        class=" py--100 py-[100px] lg:max-xl:py-[80px] md:max-lg:py-[70px]  features-section division">
+        <div class="container">
+          
+            <!-- <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  justify-center">
+                <div
+                    class="md:w-10/12 lg:max-xl:w-9/12 xl:w-9/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+                    <div
+                        class="section-title mb--70 xl:!mb-[70px] lg:max-xl:!mb-[60px] md:max-lg:!mb-[50px] !text-center">
+                       
+                        <h2
+                            class="s-50 w--700 xl:!text-[3.125rem] lg:max-xl:!text-[2.875rem] md:max-lg:!text-[2.64705rem] sm:max-md:!text-[2.375rem] xsm:max-sm:!text-[2.0625rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] xl:!leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35] !tracking-[-0.5px]">
+                            Curated Solutions</h2>
+                    
+                        <p
+                            class="s-21 color--grey xl:!text-[1.3125rem] xl:!mt-[18px] !mb-0 lg:max-xl:!mt-[15px] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.32352rem] md:max-lg:!mt-[12px] sm:max-md:!text-[1.21875rem] sm:max-md:!mt-[12px] xsm:max-sm:!text-[1.1875rem] xsm:max-sm:!mt-[12px] xsm:max-sm:px-[3%] xsm:max-sm:py-0">
+                            Handpicked for GCBs and Landed homes</p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- FEATURES-6 WRAPPER -->
+            <div class="fbox-wrapper !text-center">
+                <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+
+
+
+                    <!-- FEATURE BOX #1 -->
+                    <div
+                        class="col md:max-lg:w-6/12 lg:max-xl:w-3/12 xl:w-3/12 flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+                        <div class="fbox-6 fb-1 wow fadeInUp md:max-lg:!mb-[35px]">
+                            <!-- Icon -->
+                            <div class="fbox-ico ico-55 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                                <div class="shape-ico color--theme relative inline-block !m-[0_auto]">
+                                    <!-- Vector Icon -->
+                                    <span class="flaticon-reorder relative z-[2]"></span>
+                                    <!-- Shape -->
+                                    <svg class="xl:!w-[135px] xl:!h-[135px] xl:top-[-30px] xl:left-[calc(50%_-_60px)] lg:max-xl:!w-[115px] lg:max-xl:!h-[115px] lg:max-xl:top-[-30px] lg:max-xl:left-[calc(50%_-_60px)] md:max-lg:!w-[100px] md:max-lg:!h-[100px] md:max-lg:top-[-30px] md:max-lg:left-[calc(50%_-_55px)] sm:max-md:!w-[135px] sm:max-md:!h-[135px] sm:max-md:top-[-30px] sm:max-md:left-[calc(50%_-_70px)] xsm:max-sm:!w-[125px] xsm:max-sm:!h-[125px] xsm:max-sm:top-[-30px] xsm:max-sm:left-[calc(50%_-_65px)] !absolute z-[1]"
+                                        viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                                            transform="translate(100 100)" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- End Icon -->
+                            <!-- Text -->
+                            <div class="fbox-txt">
+                                <h6
+                                    class="s-20 w--700 xl:!text-[1.25rem] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[10px] lg:max-xl:!mb-[12px] md:max-lg:!mb-[12px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                                    Choose your Favourites</h6>
+                                <p class="!mb-0">Choose the brands you love and integrate seamlessly with AutoLife
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END FEATURE BOX #1 -->
+                    <!-- FEATURE BOX #2 -->
+                    <div
+                        class="col md:max-lg:w-6/12 lg:max-xl:w-3/12 xl:w-3/12 flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+                        <div class="fbox-6 fb-2 wow fadeInUp md:max-lg:!mb-[35px]">
+                            <!-- Icon -->
+                            <div class="fbox-ico ico-55 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                                <div class="shape-ico color--theme relative inline-block !m-[0_auto]">
+                                    <!-- Vector Icon -->
+                                    <span class="flaticon-project relative z-[2]"></span>
+                                    <!-- Shape -->
+                                    <svg class="xl:!w-[135px] xl:!h-[135px] xl:top-[-30px] xl:left-[calc(50%_-_60px)] lg:max-xl:!w-[115px] lg:max-xl:!h-[115px] lg:max-xl:top-[-30px] lg:max-xl:left-[calc(50%_-_60px)] md:max-lg:!w-[100px] md:max-lg:!h-[100px] md:max-lg:top-[-30px] md:max-lg:left-[calc(50%_-_55px)] sm:max-md:!w-[135px] sm:max-md:!h-[135px] sm:max-md:top-[-30px] sm:max-md:left-[calc(50%_-_70px)] xsm:max-sm:!w-[125px] xsm:max-sm:!h-[125px] xsm:max-sm:top-[-30px] xsm:max-sm:left-[calc(50%_-_65px)] !absolute z-[1]"
+                                        viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                                            transform="translate(100 100)" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- End Icon -->
+                            <!-- Text -->
+                            <div class="fbox-txt">
+                                <h6
+                                    class="s-20 w--700 xl:!text-[1.25rem] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[10px] lg:max-xl:!mb-[12px] md:max-lg:!mb-[12px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                                    Private and local
+
+                                </h6>
+                                <p class="!mb-0">Fast reliable home automation
+                                    without the need for external cloud or internet connection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END FEATURE BOX #2 -->
+                   <!-- FEATURE BOX #3 -->
+                    <div
+                        class="col md:max-lg:w-6/12 lg:max-xl:w-3/12 xl:w-3/12 flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+                        <div class="fbox-6 fb-3 wow fadeInUp">
+                            <!-- Icon -->
+                            <div class="fbox-ico ico-55 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                                <div class="shape-ico color--theme relative inline-block !m-[0_auto]">
+                                    <!-- Vector Icon -->
+                                    <span class="flaticon-graphics relative z-[2]"></span>
+                                    <!-- Shape -->
+                                    <svg class="xl:!w-[135px] xl:!h-[135px] xl:top-[-30px] xl:left-[calc(50%_-_60px)] lg:max-xl:!w-[115px] lg:max-xl:!h-[115px] lg:max-xl:top-[-30px] lg:max-xl:left-[calc(50%_-_60px)] md:max-lg:!w-[100px] md:max-lg:!h-[100px] md:max-lg:top-[-30px] md:max-lg:left-[calc(50%_-_55px)] sm:max-md:!w-[135px] sm:max-md:!h-[135px] sm:max-md:top-[-30px] sm:max-md:left-[calc(50%_-_70px)] xsm:max-sm:!w-[125px] xsm:max-sm:!h-[125px] xsm:max-sm:top-[-30px] xsm:max-sm:left-[calc(50%_-_65px)] !absolute z-[1]"
+                                        viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                                            transform="translate(100 100)" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- End Icon -->
+                            <!-- Text -->
+                            <div class="fbox-txt">
+                                <h6
+                                    class="s-20 w--700 xl:!text-[1.25rem] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[10px] lg:max-xl:!mb-[12px] md:max-lg:!mb-[12px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                                    Own Your Data</h6>
+                                <p class="!mb-0">Your data stays within your home—secure, private, and efficient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END FEATURE BOX #3 -->
+  <!-- FEATURE BOX #4 -->
+                    <div
+                        class="col md:max-lg:w-6/12 lg:max-xl:w-3/12 xl:w-3/12 flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+                        <div class="fbox-6 fb-4 wow fadeInUp">
+                            <!-- Icon -->
+                            <div class="fbox-ico ico-55 !mb-[20px] xsm:max-sm:!mb-[20px]">
+                                <div class="shape-ico color--theme relative inline-block !m-[0_auto]">
+                                    <!-- Vector Icon -->
+                                    <span class="flaticon-click relative z-[2]"></span>
+                                    <!-- Shape -->
+                                    <svg class="xl:!w-[135px] xl:!h-[135px] xl:top-[-30px] xl:left-[calc(50%_-_60px)] lg:max-xl:!w-[115px] lg:max-xl:!h-[115px] lg:max-xl:top-[-30px] lg:max-xl:left-[calc(50%_-_60px)] md:max-lg:!w-[100px] md:max-lg:!h-[100px] md:max-lg:top-[-30px] md:max-lg:left-[calc(50%_-_55px)] sm:max-md:!w-[135px] sm:max-md:!h-[135px] sm:max-md:top-[-30px] sm:max-md:left-[calc(50%_-_70px)] xsm:max-sm:!w-[125px] xsm:max-sm:!h-[125px] xsm:max-sm:top-[-30px] xsm:max-sm:left-[calc(50%_-_65px)] !absolute z-[1]"
+                                        viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M69.8,-23C76.3,-2.7,57.6,25.4,32.9,42.8C8.1,60.3,-22.7,67,-39.1,54.8C-55.5,42.7,-57.5,11.7,-48.6,-11.9C-39.7,-35.5,-19.8,-51.7,5.9,-53.6C31.7,-55.6,63.3,-43.2,69.8,-23Z"
+                                            transform="translate(100 100)" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- End Icon -->
+                            <!-- Text -->
+                            <div class="fbox-txt">
+                                <h6
+                                    class="s-20 w--700 xl:!text-[1.25rem] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[10px] lg:max-xl:!mb-[12px] md:max-lg:!mb-[12px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]">
+                                    All in One Super App</h6>
+                                <p class="!mb-0">App so powerful, you'll live in 2050. Feature rich, advance automation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END FEATURE BOX #4 -->
+                  
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- END FEATURES-6 WRAPPER -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- END FEATURES-6 -->
+    <!-- DIVIDER LINE -->
+    <hr
+        class="divider w-full h-px bg-transparent bg-[linear-gradient(90deg,rgba(206,211,246,0)_0,#bbb_38%,#bbb_64%,rgba(206,211,246,0)_99%)] opacity-40 !m-0 ![border:none]">
+    <!-- TEXT CONTENT
+                     ============================================= -->
+    <section class=" pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px]  ct-02 content-section division">
+        <div class="container">
+            <!-- SECTION CONTENT (ROW) -->
+            <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
+                <!-- IMAGE BLOCK -->
+                <div
+                    class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+                    <div
+                        class="img-block !text-center video-preview wow fadeInUp mb-[-100px] lg:max-xl:-mb-[80px] md:max-lg:-mb-[80px] sm:max-md:!mb-[-50px] xsm:max-sm:-mb-[40px] relative">
+                        <!-- Play Icon -->
+                        <a class="popup-floorpan"
+                            href="https://www.youtube.com/embed/geXBYnTDrrs?vq=hd1080&rel=0&modestbranding=1&autoplay=0&mute=0&controls=1">
+
+                            <div class="video-btn video-btn-xl bg--theme w-[6.25rem] h-[6.25rem] mt-[-3.125rem] ml-[-3.125rem] hover:before:opacity-75 md:max-lg:w-28 md:max-lg:!h-28 md:max-lg:!mt-[-3.5rem] md:max-lg:ml-[-3.5rem] !absolute inline-block !text-center !text-white rounded-[100%] left-2/4 top-2/4 before:content-[''] before:absolute before:left-[-5px] before:right-[-5px] before:top-[-5px] before:bottom-[-5px] before:opacity-0 before:transition-all before:duration-[400ms] before:ease-[ease-in-out] before:rounded-[50%] before:bg-[rgba(255,255,255,0.2)] group"
+                                style="position: absolute; z-index: 10;">
+                                <div
+                                    class="video-block-wrapper transition-all duration-[400ms] ease-[ease-in-out] group-hover:scale-95">
+                                    <span class="flaticon-play-button"></span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Preview Image -->
+
+                        <!-- <img class="img-fluid" src="images1/iso2.png" alt="video-preview"> -->
+
+
+
+
+                        <video class="img-fluid" autoplay="autoplay" loop muted playsinline>
+                            <source src="./images1/fpold.mp4" type="video/mp4" alt="video-preview"
+                                style=" z-index: 1;">
+                            Your browser does not support the video tag.
+                        </video>
+
+
+                    </div>
+                </div>
+                <!-- 
+                           <div class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+							<div class="img-block !text-center left-column wow fadeInRight mr-[30px] lg:max-xl:mr-[5px] md:max-lg:mr-0 sm:max-md:mx-[3%] xsm:max-sm:m-[0_2%_35px]">
+							   <img class="img-fluid" src="images/img-02.png" alt="content-image">
+							</div>
+						 </div> -->
+
+
+
+                <!-- TEXT BLOCK -->
+                <div
+                    class="xl:w-6/12 lg:max-xl:w-6/12 md:max-lg:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+                    <div class="txt-block right-column wow fadeInLeft">
+                        <!-- Section ID -->
+                        <span
+                            class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">Floorplan
+                            Control</span>
+                        <!-- Title -->
+                        <h2
+                            class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+                            Floorplan Art Piece that makes a statement</h2>
+                        <!-- List -->
+                        <ul class="simple-list">
+                            <li class="list-item">
+                                <p>Control your home with a single touch. AutoLife’s floorplan control is a unique and
+                                    elegant way to control your home. It’s a piece of art that makes a statement.</p>
+                                </p>
+                            </li>
+                            <li class="list-item">
+                                <p class="!mb-0">See every part of your home at a glance. The floorplan control shows
+                                    you the status of every room in your home, no more scrolling!</p>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END TEXT BLOCK -->
+            </div>
+            <!-- END SECTION CONTENT (ROW) -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- END TEXT CONTENT -->
+
+
+   
+    <!-- BOX CONTENT
+					   ============================================= -->
+    <section id="lnk-1" class=" pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px]  ws-wrapper content-section">
+        <div class="container">
+            <div
+                class="bc-1-wrapper bg--white-400 bg--fixed r-16 rounded-[16px] bg-scroll sm:max-md:w-auto xsm:max-sm:w-auto w-full bg-no-repeat bg-[center_center] bg-cover">
+                <div
+                    class="section-overlay p-[80px_70px] lg:max-xl:px-[50px] lg:max-xl:py-[65px] md:max-lg:px-[40px] md:max-lg:py-[60px] sm:max-md:!px-[50px] sm:max-md:py-[70px] xsm:max-sm:px-[22px] xsm:max-sm:py-[70px] w-full h-full">
+                    <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  items-center">
+                        <!-- TEXT BLOCK -->
+                        <div
+                            class="md:w-6/12 lg:max-xl:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-last order-md-2 md:max-lg:order-2 lg:max-xl:order-2 xl:order-2">
+                            <div class="txt-block left-column wow fadeInRight">
+                                <!-- Section ID -->
+                                <span
+                                    class="section-id block !text-[0.85rem] leading-none !font-bold !tracking-[0.5px] uppercase xl:!mb-[35px] lg:max-xl:!mb-[30px] md:max-lg:!mb-[25px] sm:max-md:!mb-[25px] font-Jakarta">One-Stop
+                                    Solution</span>
+                                <!-- Title -->
+                                <h2
+                                    class="s-46 w--700 xl:!text-[2.875rem] lg:max-xl:!text-[2.625rem] md:max-lg:!text-[2.35294rem] sm:max-md:!text-[2.25rem] xsm:max-sm:!text-[1.8125rem] !font-bold lg:max-xl:!mb-[20px] md:max-lg:!mb-[15px] sm:max-md:!mb-[20px] xsm:max-sm:!mb-[15px] xl:!mb-[26px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">
+                                    Smart Home Architect Service</h2>
+                                <!-- List -->
+                                <ul class="simple-list">
+                                    <li class="list-item">
+                                        <p>End-to-end engagement from planning to programming. Enjoy a well-design flawless experience
+                                            </p>
+                                        </p>
+                                    </li>
+                                    <li class="list-item">
+                                        <p class="!mb-0">Plan together with our team of experts to ensure your home is
+                                            equipped with the latest technology and features.</p>
+                                            
+                                        </p>
+                                    </li>
+                                    <li class="list-item">
+                                        <p class="!mb-0"></p>
+                                            Simulate your home with our 3D floorplan and see how it will look like before you even start Building
+                                        </p>
+                                    </li>
+                                </ul>
+                                <!-- LINK -->
+                                <div class="txt-block-tra-link  mt-[25px] ">
+                                    <a href="#features-6" class="tra-link ico-20 color--theme hover:text-[#353f4f]">
+                                        The smarter way to work <span class="flaticon-next"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END TEXT BLOCK -->
+								<!-- IMAGE BLOCK -->
+								<div class="md:w-6/12 lg:max-xl:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:max-lg:order-2 lg:max-xl:order-2 xl:order-2">
+								   <div class="img-block !text-center right-column wow fadeInLeft pl-[10px] lg:max-xl:!pl-[10px] md:max-lg:!pl-0">
+									  <img class="img-fluid" src="images/plan.png" alt="content-image">
+								   </div>
+								</div>
+                    </div>
+                    <!-- End row -->
+                </div>
+                <!-- End section overlay -->
+            </div>
+            <!-- End content wrapper -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- END BOX CONTENT -->
+
+                  <!-- TESTIMONIALS-1
+                     ============================================= -->
+					 <section id="reviews-1" class="pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] after:absolute after:content-[''] after:z-[-1] after:w-[150%] after:!h-3/4 after:-left-1/4 after:!top-0 xsm:max-sm:after:!h-[92%]   shape--gr-whitesmoke after:bg-[linear-gradient(180deg,rgba(244,244,249,0.8)_50%,rgba(244,244,249,0.05)_100%)]  reviews-section">
+						<div class="container">
+						  <!-- SECTION TITLE -->
+						  <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  justify-center">
+							<div
+							  class="md:w-8/12 lg:max-xl:w-8/12 xl:w-8/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+							  <div class="section-title mb--70 xl:!mb-[70px] lg:max-xl:!mb-[60px] md:max-lg:!mb-[50px] !text-center">
+								<!-- Title -->
+								<h2 class="s-50 w--700 xl:!text-[3.125rem] lg:max-xl:!text-[2.875rem] md:max-lg:!text-[2.64705rem] sm:max-md:!text-[2.375rem] xsm:max-sm:!text-[2.0625rem] !font-bold !tracking-[-0.5px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">Read what our owners have to say about us</h2>
+								<!-- Text -->
+								<p class="s-21 color--grey xl:!text-[1.3125rem] xl:!mt-[18px] !mb-0 lg:max-xl:!mt-[15px] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.32352rem] md:max-lg:!mt-[12px] sm:max-md:!text-[1.21875rem] sm:max-md:!mt-[12px] xsm:max-sm:!text-[1.1875rem] xsm:max-sm:!mt-[12px] xsm:max-sm:px-[3%] xsm:max-sm:py-0">Anonymise for Privacy</p>
+							  </div>
+							</div>
+						  </div>
+						  <!-- TESTIMONIALS CONTENT -->
+						  <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] ">
+							<div class="flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+							  <div class="owl-carousel owl-theme reviews-1-wrapper">
+								<!-- TESTIMONIAL #1 -->
+								<div class="review-1 bg--white-100 block-shadow rounded-[8px] !m-[0_10px_30px] pt-[40px] !pb-[30px] px-[40px] lg:max-xl:pt-[35px] lg:max-xl:!pb-[25px] lg:max-xl:px-[25px] sm:max-md:pt-[35px] sm:max-md:!pb-[30px] sm:max-md:px-8 xsm:max-sm:!mt-0 xsm:max-sm:!mb-[20px] xsm:max-sm:mx-[6px] xsm:max-sm:pt-[35px] xsm:max-sm:!pb-[30px] xsm:max-sm:px-[20px] md:max-lg:pt-[35px] md:max-lg:!pb-[25px] md:max-lg:px-[25px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)]">
+								  <!-- Quote Icon -->
+								  <div class="review-ico ico-65 relative mt-[-25px] opacity-10 -ml-[10px]"><span class="flaticon-quote"></span></div>
+								  <!-- Text -->
+								  <div class="review-txt relative mt-[-45px] lg:max-xl:!mt-[-42px] md:max-lg:!mt-[-38px] sm:max-md:!mt-[-43px] xsm:max-sm:-mt-[40px]">
+									<!-- Text -->
+									<p>Wow 90 pages of detailed plans
+									</p>
+									<!-- Author -->
+									<div class="author-data clearfix mt-[22px] lg:max-xl:!mt-[15px] md:max-lg:!mt-0 sm:max-md:!mt-[20px] xsm:max-sm:!mt-[20px]">
+									  <!-- Avatar -->
+									  <div class="review-avatar float-left !m-[0_auto]">
+										<img class=" !w-[54px] !h-[54px] rounded-[100%] lg:max-xl:!w-[44px] lg:max-xl:!h-[44px] md:max-lg:!w-[40px] md:max-lg:!h-[40px] sm:max-md:!w-[52px] sm:max-md:!h-[52px] xsm:max-sm:!w-[52px] xsm:max-sm:!h-[52px]" src="images/review-author-1.jpg" alt="review-avatar">
+									  </div>
+									  <!-- Data -->
+									  <div class="review-author !mt-1 md:max-lg:!mt-[3px] sm:max-md:!mt-[3px] xsm:max-sm:!mt-[3px] relative inline-block !text-left p-[0_0_0_15px] lg:max-xl:!pl-[12px] lg:max-xl:pr-0 lg:max-xl:py-0 md:max-lg:!pl-[12px] md:max-lg:pr-0 md:max-lg:py-0 sm:max-md:!pl-[12px] sm:max-md:pr-0 sm:max-md:py-0 xsm:max-sm:!pl-[12px] xsm:max-sm:pr-0 xsm:max-sm:py-0">
+										<h6 class="s-18 w--700 xl:!text-[0.975rem] lg:max-xl:!text-[1rem] md:max-lg:!text-[1rem] sm:max-md:!text-[1.25rem] xsm:max-sm:!text-[1.2rem] !font-bold leading-none xl:!mb-[8px] lg:max-xl:!mb-[8px] md:max-lg:!mb-[5px] sm:max-md:!mb-[8px] xsm:max-sm:!mb-[8px] font-Jakarta">Penthouse owner with Fully private lift</h6>
+										<p class="p-sm leading-none !font-light !mb-0">'King of Ardmore'</p>
+									  </div>
+									</div>
+									<!-- End Author -->
+								  </div>
+								  <!-- End Text -->
+								</div>
+								<!-- END TESTIMONIAL #1 -->
+								<!-- TESTIMONIAL #2 -->
+								<div class="review-1 bg--white-100 block-shadow rounded-[8px] !m-[0_10px_30px] pt-[40px] !pb-[30px] px-[40px] lg:max-xl:pt-[35px] lg:max-xl:!pb-[25px] lg:max-xl:px-[25px] sm:max-md:pt-[35px] sm:max-md:!pb-[30px] sm:max-md:px-8 xsm:max-sm:!mt-0 xsm:max-sm:!mb-[20px] xsm:max-sm:mx-[6px] xsm:max-sm:pt-[35px] xsm:max-sm:!pb-[30px] xsm:max-sm:px-[20px] md:max-lg:pt-[35px] md:max-lg:!pb-[25px] md:max-lg:px-[25px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)]">
+								  <!-- Quote Icon -->
+								  <div class="review-ico ico-65 relative mt-[-25px] opacity-10 -ml-[10px]"><span class="flaticon-quote"></span></div>
+								  <!-- Text -->
+								  <div class="review-txt relative mt-[-45px] lg:max-xl:!mt-[-42px] md:max-lg:!mt-[-38px] sm:max-md:!mt-[-43px] xsm:max-sm:-mt-[40px]">
+									<!-- Text -->
+									<p>Thanks for the window and door automation. I want remote tunneling to China for my work. Also help me with test if wifi and internet is off
+									</p>
+									<!-- Author -->
+									<div class="author-data clearfix mt-[22px] lg:max-xl:!mt-[15px] md:max-lg:!mt-0 sm:max-md:!mt-[20px] xsm:max-sm:!mt-[20px]">
+									  <!-- Avatar -->
+									  <div class="review-avatar float-left !m-[0_auto]">
+										<img class=" !w-[54px] !h-[54px] rounded-[100%] lg:max-xl:!w-[44px] lg:max-xl:!h-[44px] md:max-lg:!w-[40px] md:max-lg:!h-[40px] sm:max-md:!w-[52px] sm:max-md:!h-[52px] xsm:max-sm:!w-[52px] xsm:max-sm:!h-[52px]" src="images/review-author-2.jpg" alt="review-avatar">
+									  </div>
+									  <!-- Data -->
+									  <div class="review-author !mt-1 md:max-lg:!mt-[3px] sm:max-md:!mt-[3px] xsm:max-sm:!mt-[3px] relative inline-block !text-left p-[0_0_0_15px] lg:max-xl:!pl-[12px] lg:max-xl:pr-0 lg:max-xl:py-0 md:max-lg:!pl-[12px] md:max-lg:pr-0 md:max-lg:py-0 sm:max-md:!pl-[12px] sm:max-md:pr-0 sm:max-md:py-0 xsm:max-sm:!pl-[12px] xsm:max-sm:pr-0 xsm:max-sm:py-0">
+										<h6 class="s-18 w--700 xl:!text-[0.975rem] lg:max-xl:!text-[1rem] md:max-lg:!text-[1rem] sm:max-md:!text-[1.25rem] xsm:max-sm:!text-[1.2rem] !font-bold leading-none xl:!mb-[8px] lg:max-xl:!mb-[8px] md:max-lg:!mb-[5px] sm:max-md:!mb-[8px] xsm:max-sm:!mb-[8px] font-Jakarta">Founding member of largest SG company</h6>
+										<p class="p-sm leading-none !font-light !mb-0">"Legnerary developer"</p>
+									  </div>
+									</div>
+									<!-- End Author -->
+								  </div>
+								  <!-- End Text -->
+								</div>
+								<!-- END TESTIMONIAL #2 -->
+								<!-- TESTIMONIAL #3 -->
+								<div class="review-1 bg--white-100 block-shadow rounded-[8px] !m-[0_10px_30px] pt-[40px] !pb-[30px] px-[40px] lg:max-xl:pt-[35px] lg:max-xl:!pb-[25px] lg:max-xl:px-[25px] sm:max-md:pt-[35px] sm:max-md:!pb-[30px] sm:max-md:px-8 xsm:max-sm:!mt-0 xsm:max-sm:!mb-[20px] xsm:max-sm:mx-[6px] xsm:max-sm:pt-[35px] xsm:max-sm:!pb-[30px] xsm:max-sm:px-[20px] md:max-lg:pt-[35px] md:max-lg:!pb-[25px] md:max-lg:px-[25px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)]">
+								  <!-- Quote Icon -->
+								  <div class="review-ico ico-65 relative mt-[-25px] opacity-10 -ml-[10px]"><span class="flaticon-quote"></span></div>
+								  <!-- Text -->
+								  <div class="review-txt relative mt-[-45px] lg:max-xl:!mt-[-42px] md:max-lg:!mt-[-38px] sm:max-md:!mt-[-43px] xsm:max-sm:-mt-[40px]">
+									<!-- Text -->
+									<p>Touch screen control is a game changer. thanks sky!</p>
+									</p>
+									<!-- Author -->
+									<div class="author-data clearfix mt-[22px] lg:max-xl:!mt-[15px] md:max-lg:!mt-0 sm:max-md:!mt-[20px] xsm:max-sm:!mt-[20px]">
+									  <!-- Avatar -->
+									  <div class="review-avatar float-left !m-[0_auto]">
+										<img class=" !w-[54px] !h-[54px] rounded-[100%] lg:max-xl:!w-[44px] lg:max-xl:!h-[44px] md:max-lg:!w-[40px] md:max-lg:!h-[40px] sm:max-md:!w-[52px] sm:max-md:!h-[52px] xsm:max-sm:!w-[52px] xsm:max-sm:!h-[52px]" src="images/review-author-3.jpg" alt="review-avatar">
+									  </div>
+									  <!-- Data -->
+									  <div class="review-author !mt-1 md:max-lg:!mt-[3px] sm:max-md:!mt-[3px] xsm:max-sm:!mt-[3px] relative inline-block !text-left p-[0_0_0_15px] lg:max-xl:!pl-[12px] lg:max-xl:pr-0 lg:max-xl:py-0 md:max-lg:!pl-[12px] md:max-lg:pr-0 md:max-lg:py-0 sm:max-md:!pl-[12px] sm:max-md:pr-0 sm:max-md:py-0 xsm:max-sm:!pl-[12px] xsm:max-sm:pr-0 xsm:max-sm:py-0">
+										<h6 class="s-18 w--700 xl:!text-[0.975rem] lg:max-xl:!text-[1rem] md:max-lg:!text-[1rem] sm:max-md:!text-[1.25rem] xsm:max-sm:!text-[1.2rem] !font-bold leading-none xl:!mb-[8px] lg:max-xl:!mb-[8px] md:max-lg:!mb-[5px] sm:max-md:!mb-[8px] xsm:max-sm:!mb-[8px] font-Jakarta">co-founder of a FAANG Company</h6>
+										<p class="p-sm leading-none !font-light !mb-0">'super private office'</p>
+									  </div>
+									</div>
+									<!-- End Author -->
+								  </div>
+								  <!-- End Text -->
+								</div>
+								<!-- END TESTIMONIAL #3 -->
+								<!-- TESTIMONIAL #4 -->
+								<div class="review-1 bg--white-100 block-shadow rounded-[8px] !m-[0_10px_30px] pt-[40px] !pb-[30px] px-[40px] lg:max-xl:pt-[35px] lg:max-xl:!pb-[25px] lg:max-xl:px-[25px] sm:max-md:pt-[35px] sm:max-md:!pb-[30px] sm:max-md:px-8 xsm:max-sm:!mt-0 xsm:max-sm:!mb-[20px] xsm:max-sm:mx-[6px] xsm:max-sm:pt-[35px] xsm:max-sm:!pb-[30px] xsm:max-sm:px-[20px] md:max-lg:pt-[35px] md:max-lg:!pb-[25px] md:max-lg:px-[25px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)]">
+								  <!-- Quote Icon -->
+								  <div class="review-ico ico-65 relative mt-[-25px] opacity-10 -ml-[10px]"><span class="flaticon-quote"></span></div>
+								  <!-- Text -->
+								  <div class="review-txt relative mt-[-45px] lg:max-xl:!mt-[-42px] md:max-lg:!mt-[-38px] sm:max-md:!mt-[-43px] xsm:max-sm:-mt-[40px]">
+									<!-- Text -->
+									<p>Thanks for tracking my dogs. Could you combine all devices in my movie theatre into one app?
+									</p>
+									<!-- Author -->
+									<div class="author-data clearfix mt-[22px] lg:max-xl:!mt-[15px] md:max-lg:!mt-0 sm:max-md:!mt-[20px] xsm:max-sm:!mt-[20px]">
+									  <!-- Avatar -->
+									  <div class="review-avatar float-left !m-[0_auto]">
+										<img class=" !w-[54px] !h-[54px] rounded-[100%] lg:max-xl:!w-[44px] lg:max-xl:!h-[44px] md:max-lg:!w-[40px] md:max-lg:!h-[40px] sm:max-md:!w-[52px] sm:max-md:!h-[52px] xsm:max-sm:!w-[52px] xsm:max-sm:!h-[52px]" src="images/review-author-4.jpg" alt="review-avatar">
+									  </div>
+									  <!-- Data -->
+									  <div class="review-author !mt-1 md:max-lg:!mt-[3px] sm:max-md:!mt-[3px] xsm:max-sm:!mt-[3px] relative inline-block !text-left p-[0_0_0_15px] lg:max-xl:!pl-[12px] lg:max-xl:pr-0 lg:max-xl:py-0 md:max-lg:!pl-[12px] md:max-lg:pr-0 md:max-lg:py-0 sm:max-md:!pl-[12px] sm:max-md:pr-0 sm:max-md:py-0 xsm:max-sm:!pl-[12px] xsm:max-sm:pr-0 xsm:max-sm:py-0">
+										<h6 class="s-18 w--700 xl:!text-[0.975rem] lg:max-xl:!text-[1rem] md:max-lg:!text-[1rem] sm:max-md:!text-[1.25rem] xsm:max-sm:!text-[1.2rem] !font-bold leading-none xl:!mb-[8px] lg:max-xl:!mb-[8px] md:max-lg:!mb-[5px] sm:max-md:!mb-[8px] xsm:max-sm:!mb-[8px] font-Jakarta">Dog Lover</h6>
+										<p class="p-sm leading-none !font-light !mb-0">'Robotics extraordinaire'</p>
+									  </div>
+									</div>
+									<!-- End Author -->
+								  </div>
+								  <!-- End Text -->
+								</div>
+								<!-- END TESTIMONIAL #4 -->
+								<!-- TESTIMONIAL #5 -->
+								<div class="review-1 bg--white-100 block-shadow rounded-[8px] !m-[0_10px_30px] pt-[40px] !pb-[30px] px-[40px] lg:max-xl:pt-[35px] lg:max-xl:!pb-[25px] lg:max-xl:px-[25px] sm:max-md:pt-[35px] sm:max-md:!pb-[30px] sm:max-md:px-8 xsm:max-sm:!mt-0 xsm:max-sm:!mb-[20px] xsm:max-sm:mx-[6px] xsm:max-sm:pt-[35px] xsm:max-sm:!pb-[30px] xsm:max-sm:px-[20px] md:max-lg:pt-[35px] md:max-lg:!pb-[25px] md:max-lg:px-[25px] shadow-[0_4px_12px_0_rgba(0,0,0,0.08)]">
+								  <!-- Quote Icon -->
+								  <div class="review-ico ico-65 relative mt-[-25px] opacity-10 -ml-[10px]"><span class="flaticon-quote"></span></div>
+								  <!-- Text -->
+								  <div class="review-txt relative mt-[-45px] lg:max-xl:!mt-[-42px] md:max-lg:!mt-[-38px] sm:max-md:!mt-[-43px] xsm:max-sm:-mt-[40px]">
+									<!-- Text -->
+									<p>Good. everybody have their own app control for their area.
+									</p>
+									<!-- Author -->
+									<div class="author-data clearfix mt-[22px] lg:max-xl:!mt-[15px] md:max-lg:!mt-0 sm:max-md:!mt-[20px] xsm:max-sm:!mt-[20px]">
+									  <!-- Avatar -->
+									  <div class="review-avatar float-left !m-[0_auto]">
+										<img class=" !w-[54px] !h-[54px] rounded-[100%] lg:max-xl:!w-[44px] lg:max-xl:!h-[44px] md:max-lg:!w-[40px] md:max-lg:!h-[40px] sm:max-md:!w-[52px] sm:max-md:!h-[52px] xsm:max-sm:!w-[52px] xsm:max-sm:!h-[52px]" src="images/review-author-5.jpg" alt="review-avatar">
+									  </div>
+									  <!-- Data -->
+									  <div class="review-author !mt-1 md:max-lg:!mt-[3px] sm:max-md:!mt-[3px] xsm:max-sm:!mt-[3px] relative inline-block !text-left p-[0_0_0_15px] lg:max-xl:!pl-[12px] lg:max-xl:pr-0 lg:max-xl:py-0 md:max-lg:!pl-[12px] md:max-lg:pr-0 md:max-lg:py-0 sm:max-md:!pl-[12px] sm:max-md:pr-0 sm:max-md:py-0 xsm:max-sm:!pl-[12px] xsm:max-sm:pr-0 xsm:max-sm:py-0">
+										<h6 class="s-18 w--700 xl:!text-[0.975rem] lg:max-xl:!text-[1rem] md:max-lg:!text-[1rem] sm:max-md:!text-[1.25rem] xsm:max-sm:!text-[1.2rem] !font-bold leading-none xl:!mb-[8px] lg:max-xl:!mb-[8px] md:max-lg:!mb-[5px] sm:max-md:!mb-[8px] xsm:max-sm:!mb-[8px] font-Jakarta">Smartest Space</h6>
+										<p class="p-sm leading-none !font-light !mb-0">'Shared community'</p>
+									  </div>
+									</div>
+									<!-- End Author -->
+								  </div>
+								  <!-- End Text -->
+								</div>
+								<!-- END TESTIMONIAL #5 -->
+							
+							</div>
+						  </div>
+						  <!-- END TESTIMONIALS CONTENT -->
+						</div>
+						<!-- End container -->
+					  </section>
+                  <!-- END TESTIMONIALS-1 -->
+                  <!-- FAQs-3
+                     ============================================= -->
+					 <section id="faqs-3" class="pt--100 pt-[100px] lg:max-xl:pt-[80px] md:max-lg:pt-[70px] faqs-section">
+						<div class="container">
+						   <!-- SECTION TITLE -->	
+						   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]  justify-center">
+							  <div class="md:w-10/12 lg:max-xl:w-9/12 xl:w-9/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+								 <div class="section-title !text-center mb--70 xl:!mb-[70px] lg:max-xl:!mb-[55px] md:max-lg:!mb-[45px] sm:max-md:!mb-[40px] xsm:max-sm:!mb-[40px]">
+									<!-- Title -->	
+									<h2 class="s-50 w--700 xl:!text-[3.125rem] lg:max-xl:!text-[2.875rem] md:max-lg:!text-[2.64705rem] sm:max-md:!text-[2.375rem] xsm:max-sm:!text-[2.0625rem] !font-bold !tracking-[-0.5px] leading-[1.25] font-Jakarta sm:max-md:!leading-[1.35] xsm:max-sm:!leading-[1.35]">Questions & Answers</h2>
+									<!-- Text -->	
+									<!-- <p class="s-21 color--grey xl:!text-[1.3125rem] xl:!mt-[18px] !mb-0 lg:max-xl:!mt-[15px] lg:max-xl:!text-[1.18755rem] md:max-lg:!text-[1.32352rem] md:max-lg:!mt-3 sm:max-md:!text-[1.21875rem] sm:max-md:!mt-3 xsm:max-sm:!text-[1.1875rem] xsm:max-sm:!mt-3 xsm:max-sm:px-[3%] xsm:max-sm:py-0">Ligula risus auctor tempus magna feugiat lacinia.</p> -->
+								 </div>
+							  </div>
+						   </div>
+						   <!-- FAQs-3 QUESTIONS -->
+						   <div class="faqs-3-questions">
+							<div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]">
+							   <!-- QUESTIONS HOLDER -->
+							   <div class="xl:w-6/12 lg:max-xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+								  <div class="questions-holder px-[10px] py-0 lg:max-xl:!p-0 md:max-lg:!p-0">
+									 <!-- QUESTION #1 -->
+									 <div class="question mb--35 !mb-[35px] wow fadeInUp">
+										<!-- Question -->
+										<h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]"><span class=" mr-[5px]">1.</span> What is your Speciality?</h5>
+										<!-- Answer -->
+										<p class="color--grey">3D Virutal Home Control Art Piece, Superb Automations.
+										</p>
+									 </div>
+									 <!-- QUESTION #2 -->					
+									 <div class="question mb--35 !mb-[35px] wow fadeInUp">
+										<!-- Question -->
+										<h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]"><span class=" mr-[5px]">2.</span> Can we work together</h5>
+										<!-- Answer -->
+										<p class="color--grey">We will only work with 2-3 homes per year. This is to ensure we can give the best service possible. 
+                                           We will be looking for owners that want to create a unique and special home.  
+										</p>
+									 </div>
+									 <!-- QUESTION #3 -->					
+									 <div class="question mb--35 !mb-[35px] wow fadeInUp">
+										<!-- Question -->
+										<h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]"><span class=" mr-[5px]">3.</span> Are you a Smart Home Company?</h5>
+										<!-- Answer -->
+										<ul class="simple-list color--grey">
+										   <li class="list-item">
+											  <p>We are a 'Smart home Architect' company. Heavy focus on planning, automation design & user interface.
+											  </p>
+										   </li>
+										   <li class="list-item">
+											  <p>We work closely with numerous smart home companies to ensure the best possible experience for you.
+											  </p>
+										   </li>
+										   
+										</ul>
+									 </div>
+								  </div>
+							   </div>
+							   <!-- END QUESTIONS HOLDER -->
+							   <!-- QUESTIONS WRAPPER -->
+							   <div class="xl:w-6/12 lg:max-xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full ">
+								  <div class="questions-holder px-[10px] py-0 lg:max-xl:!p-0 md:max-lg:!p-0">
+									 <!-- QUESTION #4 -->					
+									 <div class="question mb--35 !mb-[35px] wow fadeInUp">
+										<!-- Question -->
+										<h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]"><span class=" mr-[5px]">4.</span> What can you do that other Smart Home company can't do?</h5>
+										<!-- Answer -->
+										<p class="color--grey">3D Floorplan controls, super app, custom electronics, making dumb devices smart, custom user interface. Advance server rack, media server, homelab. Full privacy, local control
+										</p>
+										<!-- Answer -->
+										<p class="color--grey">We are an umbrella that covers all aspects of smart home. Including working with Electricians, HVAC, AV, Security, Networking, and more.
+										</p>
+									 </div>
+									 <!-- QUESTION #5 -->
+									 <div class="question mb--35 !mb-[35px] wow fadeInUp">
+										<!-- Question -->
+										<h5 class="s-22 w--700 xl:!text-[1.375rem] lg:max-xl:!text-[1.25rem] md:max-lg:!text-[1.397058rem] sm:max-md:!text-[1.4375rem] xsm:max-sm:!text-[1.3125rem] !font-bold xl:!mb-[20px] lg:max-xl:!mb-[15px] md:max-lg:!mb-[12px] sm:max-md:!mb-[15px] xsm:max-sm:!mb-[15px] leading-[1.35] font-Jakarta sm:max-md:!leading-[1.4] xsm:max-sm:!leading-[1.4]"><span class=" mr-[5px]">5.</span> Can you really automate my whole house even before its being built?</h5>
+										<!-- Answer -->
+										<p class="color--grey">Yea abosolutely. Come meet me for coffee/ wine, I will show you how its done. With your permission, I can do a demo for your house.
+										</p>
+									 </div>
+
+								  </div>
+							   </div>
+							   <!-- END QUESTIONS HOLDER -->
+							</div>
+							<!-- End row -->	
+						 </div>
+						   <!-- END FAQs-3 QUESTIONS -->	
+						   <!-- MORE QUESTIONS LINK -->	
+						   <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]">
+							  <div class="flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
+								 <div class="more-questions !text-center mt--40 mt-[40px] lg:max-xl:!mt-[30px] md:max-lg:!mt-[30px] ">
+									<div class="more-questions-txt bg--white-400 rounded-[100px] inline-block px-[46px] py-[22px] lg:max-xl:px-11 lg:max-xl:py-[18px] md:max-lg:px-[42px] md:max-lg:py-[18px] sm:max-md:px-[42px] sm:max-md:py-[18px] xsm:max-sm:px-9 xsm:max-sm:py-[18px]">
+									   <p class="p-lg leading-none !mb-0 lg:max-xl:!text-[1.125rem] md:max-lg:!text-[1.125rem] sm:max-md:!text-[1.125rem] xsm:max-sm:!text-[1.125rem]">Have any questions? 
+										   <a href="https://wa.me/+6592212224?text=Hi%20Sky," target="_blank"  class="color--theme font-medium !underline hover:text-[#353f4f] hover:!underline">Get in Touch</a>
+									   </p>
+									</div>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+						<!-- End container -->		
+					 </section>
+                  <!-- END FAQs-3 -->
+
+    <!-- END PAGE CONTENT -->
+    <!-- EXTERNAL SCRIPTS
+                  ============================================= -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/pricing-toggle.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/request-form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/lunar.js"></script>
+    <script src="js/wow.js"></script>
+    <!-- Custom Script -->
+    <script src="js/custom.js"></script>
+
+
+
+</body>
+
+
+
+
+</html>
