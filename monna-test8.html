@@ -112,12 +112,10 @@
 
 					<div style="display: flex; justify-content: center; align-items: center;">
 						<!-- Button -->
-
-
 						<div style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
 							<div
 								class="more-btn !text-center  mt--60 mt-[60px] lg:max-xl:!mt-[50px] md:max-lg:!mt-[50px]  wow fadeInUp">
-								<a onclick="toggleImage(3, this)" class="btn btn--tra-black hover--theme">
+								<a onclick="toggleImage(3)" class="btn btn--tra-black hover--theme">
 									Morning
 								</a>
 							</div>
@@ -141,7 +139,7 @@
 						<div class="flex-[0_0_auto] w-full max-w-full px-[calc(0.5*_1.5rem)]">
 							<div class="img-block !text-center wow fadeInUp">
 								<img style="max-height: 33rem;" class="img-fluid inline-block" id="toggleImage"
-									src="./images1/mode/night.jpg" alt="Toggle Image">
+									src="./images1/mode/evening.jpg" alt="Toggle Image">
 							</div>
 						</div>
 					</div>
@@ -2662,26 +2660,31 @@
                   </script>
                   -->
 
-	  <script>
-        function toggleImage(buttonNumber, buttonElement) {
-            const imageElement = document.getElementById('toggleImage');
-            const images = [
-                './images1/mode/afternoon.jpg',
-                './images1/mode/evening.jpg',
-                './images1/mode/morning.jpg',
-                './images1/mode/night.jpg'
-            ];
-            imageElement.src = images[buttonNumber - 1];
+<script>
+	function toggleImage(buttonNumber) {
+		const imageElement = document.getElementById('toggleImage');
+		const images = [
+			'./images1/mode/afternoon.jpg',
+			'./images1/mode/evening.jpg',
+			'./images1/mode/morning.jpg',
+			'./images1/mode/night.jpg'
+		];
 
-            document.querySelectorAll('.btn').forEach(btn => {
-                btn.style.backgroundColor = 'transparent';
-                btn.style.color = 'black';
-            });
+		// Apply fade-out transition
+		imageElement.style.transition = "opacity 0.2s ease-in-out";
+		imageElement.style.opacity = 0;
 
-            buttonElement.style.backgroundColor = 'blue';
-            buttonElement.style.color = ' ';
-        }
-    </script>
+		// Change image after transition
+		setTimeout(() => {
+			imageElement.src = images[buttonNumber - 1];
+			
+			// Wait for image to load before fading in
+			imageElement.onload = () => {
+				imageElement.style.opacity = 1;
+			};
+		}, 300); // 0.5 seconds to match the transition duration
+	}
+</script>
 
 
 </body>
