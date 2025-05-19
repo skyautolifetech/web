@@ -142,16 +142,27 @@
 		});
 
 		$('.popup-floorpan').magnificPopup({
-		    type: 'iframe',		  	  
-				iframe: {
-					patterns: {
-						youtube: {			   
-							index: 'youtube.com',
-							src: 'https://www.youtube.com/embed/geXBYnTDrrs?vq=hd1080&rel=0&modestbranding=1&autoplay=0&mute=0&controls=1'				
-								}
-							}
-						}		  		  
-		});
+  type: 'iframe',
+  iframe: {
+    patterns: {
+      youtube: {
+        index: 'youtube.com',
+        src: 'https://www.youtube.com/embed/geXBYnTDrrs?vq=hd1080&rel=0&modestbranding=1&autoplay=1&mute=1&controls=1&enablejsapi=1'
+      }
+    }
+  },
+  callbacks: {
+    open: function() {
+      setTimeout(() => {
+        const iframe = document.querySelector('.mfp-iframe');
+        if (iframe) {
+          iframe.requestFullscreen();
+        }
+      }, 500); // Slight delay to ensure iframe is loaded
+    }
+  }
+});
+
 
 
 		/*----------------------------------------------------*/
