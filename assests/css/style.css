@@ -116,6 +116,13 @@ a:focus {
   border-color: #fff!important;
 }
 
+.btn--blue-white,
+.hover--blue-white:hover {
+  color: #fff!important;
+  background-color: #7827e6!important;
+  border-color: #fff!important;
+}
+
 .btn--tra-white,
 .hover--tra-white:hover {
   color: #fff!important;
