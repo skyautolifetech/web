@@ -53,17 +53,17 @@ function hidePopup(imgId) {
   overlay.classList.remove('active');
 }
 
-function getRandomTemperature(min, max) {
-  return (Math.random() * (max - min) + min).toFixed(1) + "°C";
-}
-function updateTemperatures() {
-  const svgObject = document.getElementById("floorplan");
-  if (!svgObject || !svgObject.contentDocument) return;
-  const svgDoc = svgObject.contentDocument;
-  const tempTspan = svgDoc.getElementById("temp");
-  if (tempTspan) {
-    tempTspan.textContent = getRandomTemperature(23, 27);
-  }
-}
-// Retry updating every 5 seconds
-setInterval(updateTemperatures, 5000);
+// function getRandomTemperature(min, max) {
+//   return (Math.random() * (max - min) + min).toFixed(1) + "°C";
+// }
+// function updateTemperatures() {
+//   const svgObject = document.getElementById("floorplan");
+//   if (!svgObject || !svgObject.contentDocument) return;
+//   const svgDoc = svgObject.contentDocument;
+//   const tempTspan = svgDoc.getElementById("temp");
+//   if (tempTspan) {
+//     tempTspan.textContent = getRandomTemperature(23, 27);
+//   }
+// }
+// // Retry updating every 5 seconds
+// setInterval(updateTemperatures, 5000);
