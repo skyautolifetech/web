@@ -1,7 +1,7 @@
-// function toggleLights(element) {
-//   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
-//   element.style.opacity = currentOpacity === 0 ? "1" : "0";
-// }
+function toggleLights(element) {
+  const currentOpacity = parseFloat(getComputedStyle(element).opacity);
+  element.style.opacity = currentOpacity === 0 ? "1" : "0";
+}
 
 function toggleShine(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
