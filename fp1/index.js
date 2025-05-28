@@ -10,3 +10,10 @@ function hidePopup(imgId) {
   image.classList.remove('active');
   overlay.classList.remove('active');
 }
+
+function ShowHideView(targetid, selfid) {
+  const show = document.getElementById(targetid);
+  const hide = document.getElementById(selfid);
+  show.style.display = "block";
+  hide.style.display = "none";
+}
