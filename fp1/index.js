@@ -17,3 +17,11 @@ function ShowHideView(targetid, selfid) {
   show.style.display = "block";
   hide.style.display = "none";
 }
+
+const grad = document.getElementById("pathroom");
+let angle = 0;
+function rotateGradient() {
+  angle = (angle + 2) % 360;
+  grad.setAttribute("gradientTransform", `rotate(${angle}, 0.5, 0.5)`);
+}
+setInterval(rotateGradient, 10); // Adjust rotation speed here
