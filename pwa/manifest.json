@@ -1,0 +1,21 @@
+{
+  "name": "AutoLifeTech",
+  "short_name": "ALT",
+  "id": "/web/pwa/",
+  "start_url": "/web/pwa/a8-12.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "An app.",
+  "icons": [
+    {
+      "src": "media/img/ico/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "media/img/ico/apple-touch-icon-120x120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ]
+}
