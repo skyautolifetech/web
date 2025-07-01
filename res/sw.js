@@ -18,6 +18,8 @@ const staticAssets = [
   './media/img/bg-01.jpg',
   './media/img/plan1.jpg',
   './media/img/ico/apple-touch-icon.png',
+  './media/img/ico/apple-touch-icon-120x120.png',
+  './media/img/ico/apple-touch-icon-152x152.png',
   './media/img/ico/favicon.ico',
   './media/img/ico/whatsAppLogo.webp',
   './media/svg/front_c_v5.svg',
