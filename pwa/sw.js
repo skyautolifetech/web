@@ -6,7 +6,6 @@ const staticAssets = [
   './css/flaticon.css',
   './css/index.css',
   './css/magnific-popup.css',
-  './main.js',
   './fonts/flaticon.eot',
   './fonts/flaticon.svg',
   './fonts/flaticon.ttf',
@@ -27,6 +26,7 @@ const staticAssets = [
   './media/svg/room_a_v4.svg',
   './media/video/fpold1.mp4',
   './media/video/testintro1.mp4',
+  './main.js',
 ];
 self.addEventListener('install', async e => {
   const cache = await caches.open(cacheName);
