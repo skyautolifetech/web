@@ -1,11 +1,8 @@
-const cacheName = 'alt-v4';
+const cacheName = 'alt-v5';
 const staticAssets = [
   './a8-13.html',
   './style.css',
-  './css/animate.css',
-  './css/flaticon.css',
-  './css/index.css',
-  './css/magnific-popup.css',
+  './main.css',
   './fonts/flaticon.eot',
   './fonts/flaticon.svg',
   './fonts/flaticon.ttf',
