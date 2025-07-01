@@ -1,3 +1,7 @@
+window.addEventListener('load', () => {
+  registerSW();
+});
+
 function showPopup(imgId) {
   const image = document.getElementById(imgId);
   const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
@@ -16,4 +20,14 @@ function ShowHideView(targetid, selfid) {
   const hide = document.getElementById(selfid);
   show.style.display = "block";
   hide.style.display = "none";
+}
+
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('./res/sw.js');
+    } catch (e) {
+      console.log(`SW registration failed`);
+    }
+  }
 }
