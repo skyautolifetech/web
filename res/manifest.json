@@ -1,6 +1,7 @@
 {
   "name": "AutoLifeTech",
   "short_name": "ALT",
+  "id": "/res/",
   "start_url": "/res/",
   "display": "standalone",
   "background_color": "#fff",
