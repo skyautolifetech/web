@@ -1,4 +1,4 @@
-const cacheName = 'alt-v5';
+const cacheName = 'alt-main';
 const staticAssets = [
   './a8-13.html',
   './style.css',
@@ -23,11 +23,7 @@ const staticAssets = [
   './media/svg/room_a_v4.svg',
   './media/video/fpold1.mp4',
   './media/video/testintro1.mp4',
-  './scripts/custom.js',
-  './scripts/index.js',
-  './scripts/jquery-3.7.0.min.js',
-  './scripts/jquery.magnific-popup.min.js',
-  './scripts/wow.js',
+  './main.js',
 ];
 self.addEventListener('install', async e => {
   const cache = await caches.open(cacheName);
