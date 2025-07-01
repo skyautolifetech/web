@@ -24,7 +24,10 @@ const staticAssets = [
   './media/video/fpold1.mp4',
   './media/video/testintro1.mp4',
   './scripts/custom.js',
-  './scripts/main.js',
+  './scripts/index.js',
+  './scripts/jquery-3.7.0.min.js',
+  './scripts/jquery.magnific-popup.min.js',
+  './scripts/wow.js',
 ];
 self.addEventListener('install', async e => {
   const cache = await caches.open(cacheName);
