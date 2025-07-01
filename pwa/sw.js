@@ -1,6 +1,6 @@
 const cacheName = 'alt-v4';
 const staticAssets = [
-  './a8-12.html',
+  './a8-13.html',
   './main.css',
   './main.js',
   './fonts/flaticon.eot',
