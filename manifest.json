@@ -1,0 +1,20 @@
+{
+  "name": "AutoLifeTech",
+  "short_name": "ALT",
+  "start_url": "https://skyautolifetech.github.io/web/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "An app.",
+  "icons": [
+    {
+      "src": "images/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/apple-touch-icon-120x120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ]
+}
