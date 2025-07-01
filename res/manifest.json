@@ -1,7 +1,7 @@
 {
   "name": "AutoLifeTech",
   "short_name": "ALT",
-  "start_url": "https://skyautolifetech.github.io/web/",
+  "start_url": "/res/",
   "display": "standalone",
   "background_color": "#fff",
   "description": "An app.",
