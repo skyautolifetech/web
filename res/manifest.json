@@ -1,8 +1,8 @@
 {
   "name": "AutoLifeTech",
   "short_name": "ALT",
-  "id": "/res/",
-  "start_url": "/res/",
+  "id": "/web/res/",
+  "start_url": "/web/res/a8-12.html",
   "display": "standalone",
   "background_color": "#fff",
   "description": "An app.",
