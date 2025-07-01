@@ -78,7 +78,7 @@
 @keyframes slideOutRight{from{transform:translate3d(0,0,0)}to{visibility:hidden;transform:translate3d(100%,0,0)}}
 @keyframes slideOutUp{from{transform:translate3d(0,0,0)}to{visibility:hidden;transform:translate3d(0,-100%,0)}}
 /*-- flaticon.css --*/
-@font-face{font-family:flaticon;src:url(https://skyautolifetech.github.io/web/res/fonts/flaticon.ttf?99008aa38e7de407db084b96baa4b2a2) format("truetype"),url(https://skyautolifetech.github.io/web/res/fonts/flaticon.woff?99008aa38e7de407db084b96baa4b2a2) format("woff"),url(https://skyautolifetech.github.io/web/res/fonts/flaticon.woff2?99008aa38e7de407db084b96baa4b2a2) format("woff2"),url(https://skyautolifetech.github.io/web/res/fonts/flaticon.eot?99008aa38e7de407db084b96baa4b2a2#iefix) format("embedded-opentype"),url(https://skyautolifetech.github.io/web/res/fonts/flaticon.svg?99008aa38e7de407db084b96baa4b2a2#flaticon) format("svg")}
+@font-face{font-family:flaticon;src:url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.ttf?99008aa38e7de407db084b96baa4b2a2) format("truetype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff?99008aa38e7de407db084b96baa4b2a2) format("woff"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff2?99008aa38e7de407db084b96baa4b2a2) format("woff2"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.eot?99008aa38e7de407db084b96baa4b2a2#iefix) format("embedded-opentype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.svg?99008aa38e7de407db084b96baa4b2a2#flaticon) format("svg")}
 span[class*=" flaticon-"]:before,span[class^=flaticon-]:before{font-family:flaticon!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;font-size:20px;line-height:1!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .flaticon-play-button:before{content:"\f109"}
 .flaticon-play:before{content:"\f10a"}
@@ -122,6 +122,8 @@ span[class*=" flaticon-"]:before,span[class^=flaticon-]:before{font-family:flati
 /*-- magnific-popup.css --*/
 button::-moz-focus-inner{padding:0;border:0}
 /*-- index.css --*/
-body{background-color:grey}
-.popup-image{position:fixed;top:50%;left:50%;width:auto;height:auto;max-width:90%;max-height:90%;transform:translate(-50%,-50%) scale(1);z-index:9999;transition:transform .4s ease,opacity .4s ease;cursor:pointer;opacity:0;pointer-events:none}
-.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9998;opacity:0;transition:opacity .4s ease;pointer-events:none}
+body{background-color: grey;}
+.popup-image{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
+.popup-image.active{opacity: 1;pointer-events: auto;}
+.popup-overlay{position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9998;opacity: 0;transition: opacity 0.4s ease;pointer-events: none;}
+.popup-overlay.active{opacity: 1;pointer-events: auto;}
