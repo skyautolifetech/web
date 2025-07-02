@@ -7,12 +7,14 @@ function showPopup(imgId) {
   const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.add('active');
   overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 function hidePopup(imgId) {
   const image = document.getElementById(imgId);
   const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.remove('active');
   overlay.classList.remove('active');
+  document.body.style.removeProperty('overflow');
 }
 
 function ShowHideView(targetid, selfid) {

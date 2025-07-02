@@ -3,6 +3,7 @@ const staticAssets = [
   './a8-13.html',
   './style.css',
   './css/main.css',
+  './css/menu.css',
   './fonts/flaticon.eot',
   './fonts/flaticon.svg',
   './fonts/flaticon.ttf',

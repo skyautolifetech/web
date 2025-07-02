@@ -1,7 +1,8 @@
-const cacheName = 'alt-v2';
+const cacheName = 'alt-live';
 const staticAssets = [
   './a8-12.html',
   './style.css',
+  './css/menu.css',
   './css/animate.css',
   './css/flaticon.css',
   './css/index.css',

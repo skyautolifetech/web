@@ -1829,7 +1829,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
        style="fill:#000000;fill-opacity:0.00701755;stroke:none;stroke-width:2.38188"
        d="m 144.70367,176.582 -25.13274,2.71999 -8.70398,5.11359 -0.3264,6.09279 34.05432,5.65758 z"
        id="path1"
-       onclick="parent.showPopup('img_car')"
+       onclick="parent.showPopup('img2')"
        onmouseover="this.style.cursor = &quot;pointer&quot;" /></g><g
      inkscape:groupmode="layer"
      id="layer1"
@@ -1882,7 +1882,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
      y="58.320248"
      inkscape:label="cctv_dome"
      onmouseover="this.style.cursor = &quot;pointer&quot;"
-     onclick="parent.showPopup('img_dome')"
+     onclick="parent.showPopup('img0')"
      style="display:inline;stroke-width:0.900522" /><image
      width="9.7166319"
      height="7.7733064"
@@ -1894,7 +1894,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
      inkscape:label="cctv_bullet"
      style="opacity:1;fill:#922121;fill-opacity:1;stroke:#4b9ec9;stroke-width:9.00522;stroke-dasharray:none;stroke-opacity:1"
      onmouseover="this.style.cursor = &quot;pointer&quot;"
-     onclick="parent.showPopup('img_bullet')" /><image
+     onclick="parent.showPopup('img1')" /><image
      width="16.013592"
      height="10.133601"
      preserveAspectRatio="none"
