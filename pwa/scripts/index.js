@@ -14,7 +14,7 @@ function hidePopup(imgId) {
   const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.remove('active');
   overlay.classList.remove('active');
-  document.body.style.overflow = 'visible';
+  document.body.style.removeProperty('overflow');
 }
 
 function ShowHideView(targetid, selfid) {
