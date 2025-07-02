@@ -441,7 +441,7 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 /*-- index.css --*/
-body{background-color: grey;}
+body{background-color: grey; overflow: hidden;}
 .popup-image{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
 .popup-image.active{opacity: 1;pointer-events: auto;}
 .popup-overlay{position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9998;opacity: 0;transition: opacity 0.4s ease;pointer-events: none;}
