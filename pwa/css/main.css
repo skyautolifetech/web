@@ -78,7 +78,7 @@
 @keyframes slideOutRight{from{transform:translate3d(0,0,0)}to{visibility:hidden;transform:translate3d(100%,0,0)}}
 @keyframes slideOutUp{from{transform:translate3d(0,0,0)}to{visibility:hidden;transform:translate3d(0,-100%,0)}}
 /*-- flaticon.css --*/
-@font-face{font-family:flaticon;src:url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.ttf?99008aa38e7de407db084b96baa4b2a2) format("truetype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff?99008aa38e7de407db084b96baa4b2a2) format("woff"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff2?99008aa38e7de407db084b96baa4b2a2) format("woff2"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.eot?99008aa38e7de407db084b96baa4b2a2#iefix) format("embedded-opentype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.svg?99008aa38e7de407db084b96baa4b2a2#flaticon) format("svg")}
+@font-face{font-display:swap;font-family:flaticon;src:url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.ttf?99008aa38e7de407db084b96baa4b2a2) format("truetype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff?99008aa38e7de407db084b96baa4b2a2) format("woff"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.woff2?99008aa38e7de407db084b96baa4b2a2) format("woff2"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.eot?99008aa38e7de407db084b96baa4b2a2#iefix) format("embedded-opentype"),url(https://skyautolifetech.github.io/web/pwa/fonts/flaticon.svg?99008aa38e7de407db084b96baa4b2a2#flaticon) format("svg")}
 span[class*=" flaticon-"]:before,span[class^=flaticon-]:before{font-family:flaticon!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;font-size:20px;line-height:1!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .flaticon-play-button:before{content:"\f109"}
 .flaticon-play:before{content:"\f10a"}
@@ -139,6 +139,7 @@ span[class*=" flaticon-"]:before,span[class^=flaticon-]:before{font-family:flati
   z-index: 1043;
   position: fixed;
   outline: none !important;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden; }
 
 .mfp-container {
@@ -219,6 +220,7 @@ button.mfp-arrow {
   cursor: pointer;
   background: transparent;
   border: 0;
+  appearance: none;
   -webkit-appearance: none;
   display: block;
   outline: none;
