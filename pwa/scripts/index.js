@@ -4,41 +4,15 @@ window.addEventListener('load', () => {
 
 function showPopup(imgId) {
   const image = document.getElementById(imgId);
-  switch (image) {
-    case "img_dome":
-      const overlay = document.getElementById('overlay_dome' + imgId.replace(/\D/g, ''));
-      break;
-    case "img_bullet":
-      const overlay = document.getElementById('overlay_bullet' + imgId.replace(/\D/g, ''));
-      break;
-    case "img_car":
-      const overlay = document.getElementById('overlay_car' + imgId.replace(/\D/g, ''));
-      break;
-    default:
-      break;
-  }
+  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.add('active');
   overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
 }
 function hidePopup(imgId) {
   const image = document.getElementById(imgId);
-  switch (image) {
-    case "img_dome":
-      const overlay = document.getElementById('overlay_dome' + imgId.replace(/\D/g, ''));
-      break;
-    case "img_bullet":
-      const overlay = document.getElementById('overlay_bullet' + imgId.replace(/\D/g, ''));
-      break;
-    case "img_car":
-      const overlay = document.getElementById('overlay_car' + imgId.replace(/\D/g, ''));
-      break;
-    default:
-      break;
-  }
+  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.remove('active');
   overlay.classList.remove('active');
-  document.body.style.removeProperty('overflow');
 }
 
 function ShowHideView(targetid, selfid) {
