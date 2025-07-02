@@ -7,6 +7,7 @@ function showPopup(imgId) {
   const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
   image.classList.add('active');
   overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 function hidePopup(imgId) {
   const image = document.getElementById(imgId);
@@ -20,6 +21,7 @@ function ShowHideView(targetid, selfid) {
   const hide = document.getElementById(selfid);
   show.style.display = "block";
   hide.style.display = "none";
+  document.body.style.removeProperty('overflow');
 }
 
 async function registerSW() {
