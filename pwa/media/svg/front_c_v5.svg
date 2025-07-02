@@ -222,7 +222,7 @@ function popUpEffect(id) {
   );
   setTimeout(() =&gt; {
     element.style.opacity = &quot;0&quot;;
-  }, 3000);
+  }, 10000);
 }
 
 
