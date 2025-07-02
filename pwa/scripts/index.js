@@ -9,7 +9,7 @@ function showPopup(imgId, overlayId) {
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-function hidePopup(imgId) {
+function hidePopup(imgId, overlayId) {
   const image = document.getElementById(imgId);
   const overlay = document.getElementById(overlayId + imgId.replace(/\D/g, ''));
   image.classList.remove('active');
