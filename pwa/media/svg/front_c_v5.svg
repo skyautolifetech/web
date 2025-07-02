@@ -216,7 +216,7 @@ function popUpEffect(id) {
     ],
     {
       duration: 2000,
-      iterations: 3,
+      iterations: 10,
       easing: &quot;ease-in-out&quot;
     }
   );
