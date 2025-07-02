@@ -441,11 +441,15 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 /*-- index.css --*/
-.popup-image{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
-.popup-image.active{opacity: 1;pointer-events: auto;}
+.popup-image-dome{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
+.popup-image-dome.active{opacity: 1;pointer-events: auto;}
 .popup-overlay-dome{position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9998;opacity: 0;transition: opacity 0.4s ease;pointer-events: none;}
 .popup-overlay-dome.active{opacity: 1;pointer-events: auto;}
+.popup-image-bullet{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
+.popup-image-bullet.active{opacity: 1;pointer-events: auto;}
 .popup-overlay-bullet{position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9998;opacity: 0;transition: opacity 0.4s ease;pointer-events: none;}
 .popup-overlay-bullet.active{opacity: 1;pointer-events: auto;}
+.popup-image-car{position: fixed;top: 50%;left: 50%;width: auto;height: auto;max-width: 90%;max-height: 90%;transform: translate(-50%, -50%) scale(1);z-index: 9999;transition: transform 0.4s ease, opacity 0.4s ease;cursor: pointer;opacity: 0;pointer-events: none;}
+.popup-image-car.active{opacity: 1;pointer-events: auto;}
 .popup-overlay-car{position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9998;opacity: 0;transition: opacity 0.4s ease;pointer-events: none;}
 .popup-overlay-car.active{opacity: 1;pointer-events: auto;}
