@@ -20,7 +20,7 @@ const staticAssets = [
   './media/img/ico/apple-touch-icon-152x152.png',
   './media/img/ico/favicon.ico',
   './media/img/ico/whatsAppLogo.webp',
-  './media/svg/front_c_v5.svg',
+  './media/svg/front_c_v5a.svg',
   './media/svg/room_a_v4.svg',
   './media/video/fpold1.mp4',
   './media/video/testintro1.mp4',
