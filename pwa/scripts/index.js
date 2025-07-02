@@ -2,16 +2,16 @@ window.addEventListener('load', () => {
   registerSW();
 });
 
-function showPopup(imgId) {
+function showPopup(imgId, overlayId) {
   const image = document.getElementById(imgId);
-  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
+  const overlay = document.getElementById(overlayId + imgId.replace(/\D/g, ''));
   image.classList.add('active');
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 function hidePopup(imgId) {
   const image = document.getElementById(imgId);
-  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
+  const overlay = document.getElementById(overlayId + imgId.replace(/\D/g, ''));
   image.classList.remove('active');
   overlay.classList.remove('active');
   document.body.style.removeProperty('overflow');
