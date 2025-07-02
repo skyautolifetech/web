@@ -4,14 +4,14 @@ window.addEventListener('load', () => {
 
 function showPopup(imgId, overlayId) {
   const image = document.getElementById(imgId);
-  const overlay = document.getElementById(overlayId + imgId.replace(/\D/g, ''));
+  const overlay = document.getElementById(overlayId);
   image.classList.add('active');
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 function hidePopup(imgId, overlayId) {
   const image = document.getElementById(imgId);
-  const overlay = document.getElementById(overlayId + imgId.replace(/\D/g, ''));
+  const overlay = document.getElementById(overlayId);
   image.classList.remove('active');
   overlay.classList.remove('active');
   document.body.style.removeProperty('overflow');
