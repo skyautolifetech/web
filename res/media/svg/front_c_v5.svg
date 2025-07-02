@@ -216,13 +216,13 @@ function popUpEffect(id) {
     ],
     {
       duration: 2000,
-      iterations: 3,
+      iterations: 10,
       easing: &quot;ease-in-out&quot;
     }
   );
   setTimeout(() =&gt; {
     element.style.opacity = &quot;0&quot;;
-  }, 3000);
+  }, 10000);
 }
 
 
