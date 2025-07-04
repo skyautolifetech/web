@@ -135,7 +135,7 @@
 					patterns: {
 						youtube: {			   
 							index: 'youtube.com',
-							src: 'https://www.youtube.com/shorts/_zmGj5MrOiM'				
+							src: 'https://www.youtube.com/embed/_zmGj5MrOiM'				
 								}
 							}
 						}		  		  
