@@ -25100,7 +25100,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 .rel, section, .container {
   position: relative;
-  z-index: 3;
+  /* z-index: 3; */
 }
 .top-border {
   border-top-style: var(--tw-border-style);
