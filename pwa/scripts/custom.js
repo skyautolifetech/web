@@ -147,7 +147,6 @@
     patterns: {
       youtube: {
         index: 'youtube.com',
-        // src: 'https://www.youtube.com/embed/geXBYnTDrrs?vq=hd1080&rel=0&modestbranding=1&autoplay=1&mute=1&controls=1&enablejsapi=1'
         src: 'https://www.youtube.com/embed/geXBYnTDrrs?autoplay=1&mute=1&controls=1&enablejsapi=1'
       }
     }
