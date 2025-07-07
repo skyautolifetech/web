@@ -22,6 +22,8 @@ const staticAssets = [
   './media/img/ico/whatsAppLogo.webp',
   './media/svg/front_c_v5a.svg',
   './media/svg/room_a_v6b.svg',
+  './media/svg/comp/portal.gif',
+  './media/svg/comp/tv.gif',
   './media/video/Tap to play Video.mp4',
   './media/video/testintro1.mp4',
   './scripts/custom.js',
