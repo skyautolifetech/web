@@ -180,6 +180,19 @@ function toggleBackAndForthAnimation(id, options = {}) {
   }, interval);
 }
 
+function delayDisplay(id) {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  // Start hidden with smooth transition
+  element.style.opacity = &quot;0&quot;;
+  element.style.transition = &quot;opacity 1s ease-in-out&quot;;
+
+  // Show after 10 seconds with fade-in
+  setTimeout(() =&gt; {
+    element.style.opacity = &quot;1&quot;;
+  }, 10000);
+}
 
 function startGlowEffect(id) {
   const element = document.getElementById(id);
@@ -235,6 +248,7 @@ function callToggleBackAndForthAnimation() {
 window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
   startGlowEffect(&quot;pathroom&quot;); // Replace with actual element ID
   popUpEffect(&quot;prompt&quot;)
+  delayDisplay(&quot;portal&quot;)
 });</script><sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -247,7 +261,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
      inkscape:document-units="mm"
      inkscape:zoom="3.5370881"
      inkscape:cx="364.9895"
-     inkscape:cy="421.39183"
+     inkscape:cy="172.5996"
      inkscape:window-width="1112"
      inkscape:window-height="761"
      inkscape:window-x="567"
@@ -1777,10 +1791,10 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
        height="19.568027"
        preserveAspectRatio="none"
        xlink:href="comp/portal.gif"
-       id="image1-7"
+       id="portal"
        x="84.163544"
        y="40.533257"
-       style="fill:none;fill-opacity:1;stroke-width:3.38582;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke-width:3.38582;stroke-dasharray:none;opacity:0"
        transform="matrix(0.89698346,-0.07976344,0,0.90052293,3.4330748,9.592951)"
        clip-path="url(#clipPath30)" /><path
        style="display:inline;opacity:1;mix-blend-mode:normal;fill:#000000;fill-opacity:0.00514139;fill-rule:nonzero;stroke:url(#linearGradient22);stroke-width:0.630366;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter26)"
