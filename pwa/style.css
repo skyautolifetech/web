@@ -34703,25 +34703,6 @@ body.theme--dark {
     font-size: 1.0625rem !important;
   }
 }
-@media (max-width: 767px) { /* Adjust the max-width to your mobile breakpoint */
-      .flex.flex-wrap.mx-\[calc\(-0\.5\*_1\.5rem\)\] { /* Use the specific selector */
-        /* Option A: Using Flexbox */
-        display: flex; /* Ensure it's flex */
-        flex-wrap: wrap; /* Ensure wrapping */
-      }
-      .flex.flex-wrap.mx-\[calc\(-0\.5\*_1\.5rem\)\] > div { /* Target the direct children */
-         flex: 0 0 50%; /* Make each child take up 50% width */
-         max-width: 50%; /* Ensure max width */
-      }
-       /* Option B: Using Grid (if you change the container to display: grid) */
-       /*
-       .flex.flex-wrap.mx-\[calc\(-0\.5\*_1\.5rem\)\] {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr); // Two equal columns
-         gap: 1.5rem; // Add desired gap
-       }
-       */
-    }
 @media (max-width: 320.98px) {
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     margin: calc(var(--spacing) * 0) !important;
