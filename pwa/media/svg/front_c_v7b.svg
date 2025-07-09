@@ -113,36 +113,6 @@ function controlBreathe(id) {
   element.style.opacity = &quot;1&quot;; // Ensure visibility on start
 }
 
-
-const TVbreatheanimations = {};
-function TvBreathe(id) {
-  const element = document.getElementById(id);
-  if (!element) return;
-  // If it's already animating, cancel it and hide
-  if (TVbreatheanimations[id]) {
-    TVbreatheanimations[id].cancel();
-    delete TVbreatheanimations[id];
-    element.style.opacity = &quot;0&quot;;
-    return;
-  }
-  // Start breathe animation using Web Animations API
-  const animation = element.animate(
-    [
-      { opacity: 1 },
-      { opacity: 0.7 },
-      { opacity: 1 }
-    ],
-    {
-      duration: 4000,
-      iterations: Infinity,
-      easing: &quot;ease-in-out&quot;
-    }
-  );
-  TVbreatheanimations[id] = animation;
-  element.style.opacity = &quot;1&quot;; // Ensure visibility on start
-}
-
-
 const animationStates = {};       // Tracks running animations
 const animationDirections = {};   // Tracks current direction (1 or -1)
 const animationBounds = {};       // Stores computed min/max per element
@@ -261,7 +231,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
      inkscape:document-units="mm"
      inkscape:zoom="3.5370881"
      inkscape:cx="364.9895"
-     inkscape:cy="172.5996"
+     inkscape:cy="466.62677"
      inkscape:window-width="1112"
      inkscape:window-height="761"
      inkscape:window-x="567"
@@ -2172,7 +2142,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
        inkscape:label="chandelier_click" /></g><g
      id="g32"
      inkscape:label="tv"
-     onclick="TvBreathe('tv')"
+     onclick="controlLights('tv')"
      onmouseover="this.style.cursor = &quot;pointer&quot;"><g
        id="g30"
        style="display:inline;stroke-width:0.666208"
