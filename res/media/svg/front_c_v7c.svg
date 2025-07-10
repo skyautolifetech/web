@@ -161,7 +161,7 @@ function delayDisplay(id) {
   // Show after 15 seconds with fade-in
   setTimeout(() =&gt; {
     element.style.opacity = &quot;1&quot;;
-  }, 30000);
+  }, 20000);
 }
 
 function startGlowEffect(id) {
