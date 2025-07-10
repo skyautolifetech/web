@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   sodipodi:docname="front_c_v7b.svg"
+   sodipodi:docname="front_c_v7c.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -113,36 +113,6 @@ function controlBreathe(id) {
   element.style.opacity = &quot;1&quot;; // Ensure visibility on start
 }
 
-
-const TVbreatheanimations = {};
-function TvBreathe(id) {
-  const element = document.getElementById(id);
-  if (!element) return;
-  // If it's already animating, cancel it and hide
-  if (TVbreatheanimations[id]) {
-    TVbreatheanimations[id].cancel();
-    delete TVbreatheanimations[id];
-    element.style.opacity = &quot;0&quot;;
-    return;
-  }
-  // Start breathe animation using Web Animations API
-  const animation = element.animate(
-    [
-      { opacity: 1 },
-      { opacity: 0.7 },
-      { opacity: 1 }
-    ],
-    {
-      duration: 4000,
-      iterations: Infinity,
-      easing: &quot;ease-in-out&quot;
-    }
-  );
-  TVbreatheanimations[id] = animation;
-  element.style.opacity = &quot;1&quot;; // Ensure visibility on start
-}
-
-
 const animationStates = {};       // Tracks running animations
 const animationDirections = {};   // Tracks current direction (1 or -1)
 const animationBounds = {};       // Stores computed min/max per element
@@ -180,6 +150,19 @@ function toggleBackAndForthAnimation(id, options = {}) {
   }, interval);
 }
 
+function delayDisplay(id) {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  // Start hidden with smooth transition
+  element.style.opacity = &quot;0&quot;;
+  element.style.transition = &quot;opacity 1s ease-in-out&quot;;
+
+  // Show after 10 seconds with fade-in
+  setTimeout(() =&gt; {
+    element.style.opacity = &quot;1&quot;;
+  }, 10000);
+}
 
 function startGlowEffect(id) {
   const element = document.getElementById(id);
@@ -235,6 +218,7 @@ function callToggleBackAndForthAnimation() {
 window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
   startGlowEffect(&quot;pathroom&quot;); // Replace with actual element ID
   popUpEffect(&quot;prompt&quot;)
+  delayDisplay(&quot;portal&quot;)
 });</script><sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -245,13 +229,13 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="3.5370881"
-     inkscape:cx="364.9895"
-     inkscape:cy="421.39183"
+     inkscape:zoom="0.88427203"
+     inkscape:cx="310.99027"
+     inkscape:cy="166.80387"
      inkscape:window-width="1112"
      inkscape:window-height="761"
-     inkscape:window-x="567"
-     inkscape:window-y="151"
+     inkscape:window-x="517"
+     inkscape:window-y="150"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1"
      showguides="false" /><defs
@@ -1743,7 +1727,17 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
          d="m 88.255938,109.22365 -0.03516,10.72898 17.440662,0.79064 -0.0263,-11.44907 z"
          id="path32"
          sodipodi:nodetypes="ccccc"
-         inkscape:label="cont" /></clipPath></defs><g
+         inkscape:label="cont" /></clipPath><filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter8"
+       x="-0.017777852"
+       y="-0.014297251"
+       width="1.0355557"
+       height="1.0285945"><feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.08056174"
+         id="feGaussianBlur8" /></filter></defs><g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="bg"
@@ -1777,16 +1771,20 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
        height="19.568027"
        preserveAspectRatio="none"
        xlink:href="comp/portal.gif"
-       id="image1-7"
+       id="portal"
        x="84.163544"
        y="40.533257"
-       style="fill:none;fill-opacity:1;stroke-width:3.38582;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke-width:3.38582;stroke-dasharray:none;opacity:0"
        transform="matrix(0.89698346,-0.07976344,0,0.90052293,3.4330748,9.592951)"
        clip-path="url(#clipPath30)" /><path
        style="display:inline;opacity:1;mix-blend-mode:normal;fill:#000000;fill-opacity:0.00514139;fill-rule:nonzero;stroke:url(#linearGradient22);stroke-width:0.630366;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter26)"
        d="m 80.022223,40.14711 8.975979,-1.087996 -0.1088,16.156763 -8.75838,0.761597 z"
        id="pathroom"
-       inkscape:label="room" /><rect
+       inkscape:label="room" /><path
+       style="font-variation-settings:'wght' 700;opacity:0.658662;fill:#cfcfcf;fill-opacity:1;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:3;stroke-dasharray:none;filter:url(#filter8)"
+       d="m 84.562309,39.674225 10.87579,-1.181266 -0.08147,12.545853 -10.631389,0.977599 z"
+       id="path1"
+       transform="matrix(0.90052293,0,0,0.90052293,3.4331096,9.5933013)" /><rect
        style="font-variation-settings:'wght' 700;display:inline;opacity:0;fill:#c9a400;stroke:#67f0fe;stroke-width:1.62095;stroke-linecap:square;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1"
        id="nav_click"
        width="71.532501"
@@ -2158,7 +2156,7 @@ window.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; { // Run on load
        inkscape:label="chandelier_click" /></g><g
      id="g32"
      inkscape:label="tv"
-     onclick="TvBreathe('tv')"
+     onclick="controlLights('tv')"
      onmouseover="this.style.cursor = &quot;pointer&quot;"><g
        id="g30"
        style="display:inline;stroke-width:0.666208"
