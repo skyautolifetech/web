@@ -205,7 +205,7 @@ function popUpEffect(id) {
   );
   setTimeout(() =&gt; {
     element.style.opacity = &quot;0&quot;;
-  }, 10000);
+  }, 5000);
 }
 
 
