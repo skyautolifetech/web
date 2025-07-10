@@ -158,10 +158,10 @@ function delayDisplay(id) {
   element.style.opacity = &quot;0&quot;;
   element.style.transition = &quot;opacity 1s ease-in-out&quot;;
 
-  // Show after 10 seconds with fade-in
+  // Show after 15 seconds with fade-in
   setTimeout(() =&gt; {
     element.style.opacity = &quot;1&quot;;
-  }, 10000);
+  }, 15000);
 }
 
 function startGlowEffect(id) {
