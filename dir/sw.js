@@ -1,6 +1,6 @@
-const cacheName = 'alt-main';
+const cacheName = 'cache';
 const staticAssets = [
-  './a8-13.html',
+  './a8-14.html',
   './style.css',
   './css/main.css',
   './css/menu.css',

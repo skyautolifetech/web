@@ -1,11 +1,11 @@
 {
-  "name": "xAutoLifeTech",
-  "short_name": "xALT",
-  "id": "/web/pwa/",
-  "start_url": "/web/pwa/a8-13.html",
+  "name": "AutoLifeTech",
+  "short_name": "ALT",
+  "id": "/web/dir/",
+  "start_url": "/web/dir/a8-14.html",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "Experimental version application.",
+  "description": "Make your home smart, and life simpler.",
   "icons": [
     {
       "src": "media/img/ico/apple-touch-icon-152x152.png",
