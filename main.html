@@ -31,7 +31,164 @@
 	<link href="css/animate.css" rel="stylesheet">
 	<!-- TEMPLATE CSS -->
 	<link href="./style.css" rel="stylesheet">
-	
+	<!-- INTERNAL CSS -->
+	<style>
+		body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Inter', Arial, sans-serif;
+		background: #f5f5f5;
+		}
+		.main-container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		min-height: 24rem;
+		margin-bottom: 1rem;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		background-color: #D4D0D6;
+		box-sizing: border-box;
+		}
+		.section-title {
+		font-size: 2rem;
+		font-weight: 800;
+		color: #2d3748;
+		text-align: center;
+		margin-bottom: 1rem;
+		margin-top: 1.5rem;
+		}
+		.solutions-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+		width: 100%;
+		max-width: 1600px;
+		box-sizing: border-box;
+		}
+		@media (min-width: 640px) {
+		.main-container {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+		.solutions-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		}
+		@media (min-width: 1024px) {
+		.main-container {
+			padding-left: 8rem;
+			padding-right: 8rem;
+		}
+		.solutions-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		}
+		.solution-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		max-width: 24rem;
+		width: 100%;
+		transition: box-shadow 0.2s;
+		margin: 0 auto;
+		}
+		.solution-card:hover {
+		box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+		}
+		.solution-card img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+		margin-bottom: 1rem;
+		border-radius: 0.5rem;
+		}
+		.solution-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #2d3748;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 1rem;
+		}
+		.dropdowns {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 1rem;
+		width: 100%;
+		}
+		.dropdown {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 0.5rem;
+		background: #fff;
+		padding: 0.5rem;
+		margin: 0 auto;
+		box-sizing: border-box;
+		border: 1px solid #f1f1f1;
+		}
+		.dropdown-btn {
+		border-bottom: 1px solid rgba(107,114,128,0.5);
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 500;
+		color: #9ca3af;
+		outline: none;
+		background: none;
+		width: 100%;
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+		transition: color 0.2s;
+		}
+		.dropdown-btn:focus {
+		color: #2d3748;
+		}
+		.dropdown-icon {
+		border-radius: 9999px;
+		padding: 0.5rem;
+		display: inline-block;
+		background: #9ca3af;
+		transition: background 0.2s, transform 0.2s;
+		margin-left: 0.5rem;
+		}
+		.dropdown-content {
+		padding-right: 1rem;
+		font-size: 0.95rem;
+		text-align: left;
+		color: #a1a1aa;
+		overflow: hidden;
+		max-height: 0;
+		opacity: 0;
+		transition: max-height 0.3s ease, opacity 0.3s ease;
+		}
+		.dropdown.open .dropdown-content {
+		max-height: 200px;
+		opacity: 1;
+		margin-top: 0.5rem;
+		}
+		.dropdown.open .dropdown-icon {
+		transform: rotate(45deg);
+		background: #2d3748;
+		}
+	</style>
 </head>
 <body>
 <!-- PAGE CONTENT
@@ -446,88 +603,335 @@
 	<!-- END FEATURES-2 -->
 	<!-- SOLUTION
 		============================================= -->
-	<div style="margin: auto; padding: 3.5rem 1rem; display: flex; flex-direction: column; align-items: center; min-height: 24rem; background-color: #D4D0D6; width: 100%;">
-		<div style="margin: 1.5rem 0; text-align: center;">
-			<h1 style="font-size: 2rem; font-weight: 800; color: #2d3748; margin-bottom: 1rem;">
+	<div class="main-container">
+		<div>
+			<h1 class="section-title">
 				Solutions Based Design
 			</h1>
 		</div>
-		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; width: 100%; max-width: 1200px;">
-		<!-- Card 1 -->
-		<div style="display: flex; flex-direction: column; align-items: center; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 0.5rem; padding: 1.5rem;">
-			<img src="./User experience/HotFLusha-woman-sat-in-bed-and-experience-a-head-as-part-of-her-high-blood-pressure-symptoms.jpg" alt="Smart Home Feature" style="width: 100%; height: 250px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-			<h2 style="font-size: 1.25rem; font-weight: bold; color: #2d3748; text-align: center; margin-top: 1rem;">
-				Elderly needs safety
-			</h2>
-			<div style="margin-top: 1rem; text-align: left; color: #4a5568; font-size: 0.875rem;">
-				<p>
+		<div class="solutions-grid">
+		<!-- Solution Card Example: Repeat for all solutions -->
+			<div class="solution-card">
+				<img src="./User experience/HotFLusha-woman-sat-in-bed-and-experience-a-head-as-part-of-her-high-blood-pressure-symptoms.jpg" alt="Smart Home Feature">
+				<h2 class="solution-title">Elderly needs safety</h2>
+				<div class="dropdowns">
+				<div class="dropdown">
+					<button class="dropdown-btn" onclick="toggleDropdown(this)">
+					Read Issue
+					<span class="dropdown-icon">
+						<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+					</span>
+					</button>
+					<div class="dropdown-content">
 					Mrs. Tan, in her 70s, is a stroke survivor. Her family constantly worries about the risk of another stroke or a sudden fall, especially when she’s alone.
-				</p>
-				<p>
-					We install smart occupancy sensors in key areas like the bathroom. If Mrs. Tan stays inside for over 30 minutes, an alert is automatically sent to the family group chat, prompting a check-in.
-				</p>
-				<p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-btn" onclick="toggleDropdown(this)">
+					Our Solution
+					<span class="dropdown-icon">
+						<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+					</span>
+					</button>
+					<div class="dropdown-content">
+					We install smart occupancy sensors in key areas like the bathroom. If Mrs. Tan stays inside for over 30 minutes, an alert is automatically sent to the family group chat, prompting a check-in. Emergency buttons are also placed throughout the house, allowing Mrs. Tan to call for help instantly when needed.
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-btn" onclick="toggleDropdown(this)">
+					Final Results
+					<span class="dropdown-icon">
+						<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+					</span>
+					</button>
+					<div class="dropdown-content">
 					Mrs. Tan’s family can finally have peace of mind, knowing she’s safe, while she maintains her independence with confidence.
-				</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		<!-- Solution Card 2 -->
+		<div class="solution-card">
+			<img src="./User experience/pexels-rodnae-productions-5591833.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Helper Call Button</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				In large homes, it can be difficult for family members to easily call for help in different rooms.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				The Helper Call Button is strategically placed in the grandparents room, and voice commands are set up for the rest of the family to call for assistance. When activated, the helpers bedside lamp flashes blue, and speakers announce, "Need assistance in [Room Name], please assist."
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				With the knowledge that they are being monitored, Susu’s performance has noticeably improved.
+		</div>
+			</div>
 			</div>
 		</div>
-		<!-- Card 2 -->
-		<div style="display: flex; flex-direction: column; align-items: center; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 0.5rem; padding: 1.5rem;">
-			<img src="./User experience/pexels-rodnae-productions-5591833.jpg" alt="Smart Home Feature" style="width: 100%; height: 250px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-			<h2 style="font-size: 1.25rem; font-weight: bold; color: #2d3748; text-align: center; margin-top: 1rem;">
-				Helper Call Button
-			</h2>
-			<div style="margin-top: 1rem; text-align: left; color: #4a5568; font-size: 0.875rem;">
-				<p>
-					In large homes, it can be difficult for family members to easily call for help in different rooms.
-				</p>
-				<p>
-					The Helper Call Button is strategically placed in the grandparents room. Voice commands trigger a flashing lamp and speaker announcements requesting assistance.
-				</p>
-				<p>
-					With the knowledge that they are being monitored, Susu’s performance has noticeably improved.
-				</p>
+		<!-- Solution Card 3 -->
+		<div class="solution-card">
+			<img src="./User experience/pexels-andrea-piacquadio-3767426.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Seamless Care</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Mrs. Tan, in her 70s, is a stroke survivor. Her family constantly worries about the risk of another stroke or a sudden fall, especially when she’s alone.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				We install smart occupancy sensors in key areas like the bathroom. If Mrs. Tan stays inside for over 30 minutes, an alert is automatically sent to the family group chat, prompting a check-in. Emergency buttons are also placed throughout the house, allowing Mrs. Tan to call for help instantly when needed.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Mrs. Tan’s family can finally have peace of mind, knowing she’s safe, while she maintains her independence with confidence.
+				</div>
+			</div>
 			</div>
 		</div>
-		<!-- Card 3 -->
-		<div style="display: flex; flex-direction: column; align-items: center; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 0.5rem; padding: 1.5rem;">
-			<img src="./User experience/pexels-andrea-piacquadio-3767426.jpg" alt="Smart Home Feature" style="width: 100%; height: 250px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-			<h2 style="font-size: 1.25rem; font-weight: bold; color: #2d3748; text-align: center; margin-top: 1rem;">
-				Seamless Care
-			</h2>
-			<div style="margin-top: 1rem; text-align: left; color: #4a5568; font-size: 0.875rem;">
-				<p>
-					Mrs. Tan, in her 70s, is a stroke survivor. Her family constantly worries about her being alone.
-				</p>
-				<p>
-					Smart sensors send alerts if she remains in the bathroom too long. Emergency buttons are also installed for quick help.
-				</p>
-				<p>
-					Now she feels safer and her family is reassured of her well-being.
-				</p>
+		<!-- Solution Card 4 -->
+		<div class="solution-card">
+			<img src="./User experience/pexels-andres-ayrton-6551070-800x1200.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Stay Fit, Stay Smart</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Fiona often blamed herself for struggling with food cravings and a lack of motivation to exercise. She desperately wanted to lose weight, but reminders of pastries and sweet drinks on her living room table only reinforced her feelings of failure
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				We introduced an automated dashboard to track Fiona’s weight loss journey visually. She swapped cookies and sugary drinks for plain water and a yoga mat. With AutoLife’s smart scheduling, her workout music played automatically, and the lights and curtains adjusted themselves to create an energizing environment. She set up two 10-minute workout sessions daily, and even got a friend to join via video chat—keeping fitness fun and social.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Fiona developed healthier habits and felt proud of her progress. Instead of self-blame, she recognized the power of her environment and consistent routines in achieving her weight loss goals
+				</div>
+			</div>
 			</div>
 		</div>
-		<!-- Card 4 -->
-		<div style="display: flex; flex-direction: column; align-items: center; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 0.5rem; padding: 1.5rem;">
-			<img src="./User experience/pexels-andres-ayrton-6551070-800x1200.jpg" alt="Smart Home Feature" style="width: 100%; height: 250px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-			<h2 style="font-size: 1.25rem; font-weight: bold; color: #2d3748; text-align: center; margin-top: 1rem;">
-				Stay Fit, Stay Smart
-			</h2>
-			<div style="margin-top: 1rem; text-align: left; color: #4a5568; font-size: 0.875rem;">
-				<p>
-					Fiona struggled with cravings and motivation to exercise.
-				</p>
-				<p>
-					We created a routine using AutoLife: music plays, lights and curtains adjust, and sessions are scheduled. Her workouts became fun and consistent.
-				</p>
-				<p>
-					She now feels proud of her progress and new lifestyle.
-				</p>
+		<!-- Solution Card 5 -->
+		<div class="solution-card">
+			<img src="./User experience/mining-machines.png" alt="Smart Home Feature">
+			<h2 class="solution-title">Stop Energy Thieves</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				John rented out rooms with utilities included to boost his income. However, he was surprised when his electricity bill shot up by nearly 50%. He needed to find out what was driving the sudden surge in energy consumption.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				We installed smart sockets to monitor real-time electrical usage and room activity. This allowed John to track consumption patterns and identify any unusual spikes.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				John quickly discovered that one room was consuming an excessive amount of power. Upon investigation, he found that the tenant had set up bitcoin mining machines running 24/7. With clear evidence, John successfully renegotiated the rental agreement, adjusting the price to account for the additional energy costs.
+				</div>
+			</div>
 			</div>
 		</div>
-		<!-- You can repeat the structure above for remaining cards -->
+		<!-- Solution Card 6 -->
+		<div class="solution-card">
+			<img src="./Solutions/Autolifetech-Home-Automation-Solution-Work-from-Home.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Children can’t Focus and Study</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				I find it so difficult to study," Tommy shared. With his PSLE exams approaching, staying focused was a real struggle.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				We created a custom "Study Mode" scene using AutoLife’s automation. After chatting with Tommy, we integrated his favorite study playlist. At the push of a button, his room transformed: music played, curtains opened, and smart anti-flicker lights provided a bright and comfortable setting. We also introduced a smart automation timer to support the Pomodoro technique, balancing focused study sessions with well-timed breaks.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Using occupancy sensors, we tracked Tommy’s study hours. He now feels proud of his consistent study habits and improved discipline. With AutoLife, he’s better prepared and more confident for his exams.
+				</div>
+			</div>
+			</div>
 		</div>
-	</div>				 
+		<!-- Solution Card 7 -->
+		<div class="solution-card">
+			<img src="./Solutions/pexels-ryutaro-tsukata-5472251.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Addicted to TV Games</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Jason, a primary school student, used to spend hours playing his favorite TV game, Plants vs. Zombies, right after school. His routine often led to arguments with his mum, especially when he fibbed about his gaming habits. She wanted him to shower, complete an hour of homework, and only then enjoy his game time.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				With AutoLife's intelligent IoT technology, Jason’s mum gained full control over the TV's main power. She set an automation that disables the TV from 2-5pm
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Now, Jason showers as soon as he gets home and maintains a solid hour of study time before enjoying his games. His mum is thrilled with the newfound balance, and the household is more harmonious than ever.
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- Solution Card 8 -->
+		<div class="solution-card">
+			<img src="./Solutions/Autolifetech-Home-Automation-Solution-Dementia.jpg" alt="Smart Home Feature">
+			<h2 class="solution-title">Dementia – Loved and Not Forgotten</h2>
+			<div class="dropdowns">
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Read Issue
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				Grandma’s dementia was worsening. She often forgot to take her medication and occasionally wandered out of the house in the middle of the night, leaving the family in constant worry.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Our Solution
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				We installed a smart door lock and CCTV system to monitor when Grandma entered or exited the home. If she stepped outside at 2 a.m., the speakers gently reminded her, “Ah Ma, please go back to bed.” Her phone’s location tracking was activated, and a contact sensor on the medicine cabinet helped monitor when she took her medication.
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn" onclick="toggleDropdown(this)">
+				Final Results
+				<span class="dropdown-icon">
+					<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="12" height="2" rx="1" fill="#fff"/><rect x="5" width="2" height="12" rx="1" fill="#fff"/></svg>
+				</span>
+				</button>
+				<div class="dropdown-content">
+				The family now enjoys peace of mind. They receive alerts if Grandma leaves at odd hours, and they can ensure her medication routine is maintained—keeping her safe and cared for, always.
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>		 
 	<!-- END SOLUTION -->					 
 	<div id="brands-1" class="py--90 py-[90px] lg:max-xl:py-[70px] md:max-lg:py-[60px] brands-section">
 		<div class="container">
@@ -730,6 +1134,18 @@
 		console.log("normal mouse up:", e.which);
 		}
 	});
+    function toggleDropdown(btn) {
+      var dropdown = btn.parentElement;
+      var isOpen = dropdown.classList.contains('open');
+      // Close all dropdowns in the same card
+      var card = dropdown.parentElement;
+      var dropdowns = card.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(d) { d.classList.remove('open'); });
+      // Toggle current dropdown
+      if (!isOpen) {
+        dropdown.classList.add('open');
+      }
+    }
 </script>
 <script src="js/changer.js"></script>
 <script defer src="js/styleswitch.js"></script>
