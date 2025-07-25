@@ -1134,6 +1134,18 @@
 		console.log("normal mouse up:", e.which);
 		}
 	});
+    function toggleDropdown(btn) {
+      var dropdown = btn.parentElement;
+      var isOpen = dropdown.classList.contains('open');
+      // Close all dropdowns in the same card
+      var card = dropdown.parentElement;
+      var dropdowns = card.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(d) { d.classList.remove('open'); });
+      // Toggle current dropdown
+      if (!isOpen) {
+        dropdown.classList.add('open');
+      }
+    }
 </script>
 <script src="js/changer.js"></script>
 <script defer src="js/styleswitch.js"></script>
