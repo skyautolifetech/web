@@ -1470,30 +1470,19 @@
             }
       });
    });
+   function toggleDropdown(btn) {
+      var dropdown = btn.parentElement;
+      var isOpen = dropdown.classList.contains('open');
+      // Close all dropdowns in the same card
+      var card = dropdown.parentElement;
+      var dropdowns = card.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(d) { d.classList.remove('open'); });
+      // Toggle current dropdown
+      if (!isOpen) {
+        dropdown.classList.add('open');
+      }
+   }
 </script>
-<script>
-   $(document).ready(function() {
-         if( $( "body" ).hasClass( "theme--dark" )) {
-            $( ".switch" ).text( "Light Mode" );
-         } else {
-            $( ".switch" ).text( "Dark Mode" );
-         }
-      });
-</script>
-<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->															
-<!--
-   <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
-      _gaq.push(['_trackPageview']);
-   
-      (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-   </script>
-   -->	
 <script src="js/changer.js"></script>
 <script defer src="js/styleswitch.js"></script>	
 </body>
