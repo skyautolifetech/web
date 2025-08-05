@@ -4491,10 +4491,10 @@
       background-image: linear-gradient(180deg,rgba(244,244,249,0.8) 50%,rgba(244,244,249,0.05) 100%);
     }
   }
-  .after\:bg-\[url\(\.\/images\/blur-purple\.png\)\] {
+  .after\:bg-\[url\(\.\/media\/blur-purple\.png\)\] {
     &::after {
       content: var(--tw-content);
-      background-image: url(./images/blur-purple.png);
+      background-image: url(./media/blur-purple.png);
     }
   }
   .after\:bg-\[url\(\.\/images\/hero-18\.jpg\)\] {
